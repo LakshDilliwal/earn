@@ -1,31 +1,23 @@
 // =============================================================================
 // A36 Earn — Prisma Client Singleton
-// Prisma 7 + MySQL 8.0 via @prisma/adapter-mysql2
-// engineType = "client" requires an adapter — we use mysql2 (zero extra cost)
+// Prisma 7 + MySQL 8.0, engineType = library
+// No adapter needed for standard MySQL with library engine
 // =============================================================================
-import { PrismaMysql } from '@prisma/adapter-mysql2';
-import mysql from 'mysql2/promise';
-
 import { PrismaClient } from '../generated/prisma/client.ts';
 
-const globalForPrisma = globalThis as unknown as {
-  prisma: PrismaClient | undefined;
-};
+declare const globalThis: {
+  prismaGlobal: PrismaClient;
+} & typeof global;
 
-function createPrismaClient() {
-  const pool = mysql.createPool(process.env.DATABASE_URL!);
-  const adapter = new PrismaMysql(pool);
-  return new PrismaClient({
-    adapter,
+const prisma =
+  globalThis.prismaGlobal ??
+  new PrismaClient({
     log:
       process.env.NODE_ENV === 'development'
         ? ['query', 'error', 'warn']
         : ['error'],
   });
-}
 
-export const prisma = globalForPrisma.prisma ?? createPrismaClient();
+if (process.env.NODE_ENV !== 'production') globalThis.prismaGlobal = prisma;
 
-if (process.env.NODE_ENV !== 'production') {
-  globalForPrisma.prisma = prisma;
-}
+export { prisma };
