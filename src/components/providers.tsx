@@ -1,9 +1,12 @@
-import { PrivyProvider, usePrivy } from '@privy-io/react-auth';
-import { createSolanaRpc, createSolanaRpcSubscriptions } from '@solana/kit';
+// =============================================================================
+// A36 Earn — App Providers
+// Privy removed. Auth is handled by NextAuth SessionProvider.
+// Solana RPC is configured via wagmi/viem in Phase 2b.
+// =============================================================================
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { type Session } from 'next-auth';
 import { SessionProvider } from 'next-auth/react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { ExternalLinkDialogProvider } from '@/components/shared/ExternalLinkDialogProvider';
 
@@ -18,41 +21,11 @@ export default function Providers({
 
   return (
     <SessionProvider session={session}>
-      <PrivyProvider
-        config={{
-          loginMethods: ['email', 'google'],
-          solana: {
-            rpcs: {
-              'solana:mainnet': {
-                rpc: createSolanaRpc(
-                  `https://${process.env.NEXT_PUBLIC_RPC_URL}`,
-                ),
-                rpcSubscriptions: createSolanaRpcSubscriptions(
-                  `${process.env.NEXT_PUBLIC_RPC_WS_URL}`,
-                ),
-              },
-            },
-          },
-        }}
-        appId={process.env.NEXT_PUBLIC_PRIVY_APP_ID!}
-      >
-        <QueryClientProvider client={queryClient}>
-          <ExternalLinkDialogProvider>
-            <PrivyInitFlagBridge />
-            {children}
-          </ExternalLinkDialogProvider>
-        </QueryClientProvider>
-      </PrivyProvider>
+      <QueryClientProvider client={queryClient}>
+        <ExternalLinkDialogProvider>
+          {children}
+        </ExternalLinkDialogProvider>
+      </QueryClientProvider>
     </SessionProvider>
   );
-}
-
-function PrivyInitFlagBridge(): null {
-  const { ready } = usePrivy();
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      (window as any).__privyInitializing = !ready;
-    }
-  }, [ready]);
-  return null;
 }
