@@ -1,44 +1,46 @@
-import { Ratelimit } from '@upstash/ratelimit';
+// =============================================================================
+// A36 Earn — Rate Limiter (Free, Redis-free, LRU-Cache based)
+// Replaces @upstash/ratelimit. Runs in-process — zero infra cost.
+// For production scale-out, swap the store with an ioredis adapter.
+// =============================================================================
+import { LRUCache } from 'lru-cache';
 
-import { redis } from './redis';
+type RateLimitOptions = {
+  uniqueTokenPerInterval?: number;
+  interval?: number; // ms
+};
 
-/**
- * Generic rate limiter for public API endpoints.
- * 30 requests per 10 seconds per IP - allows normal browsing while blocking abuse.
- * Uses sliding window for smoother rate limiting.
- */
+export function rateLimit(options: RateLimitOptions = {}) {
+  const tokenCache = new LRUCache<string, number[]>({
+    max: options.uniqueTokenPerInterval ?? 500,
+    ttl: options.interval ?? 60_000,
+  });
 
-export const aiGenerateRateLimiter = new Ratelimit({
-  redis: redis,
-  limiter: Ratelimit.fixedWindow(20, '1 m'),
-  analytics: true,
-  prefix: 'ratelimit:ai_generate',
+  return {
+    check: (limit: number, token: string): Promise<void> =>
+      new Promise((resolve, reject) => {
+        const tokenCount = tokenCache.get(token) ?? [];
+        const now = Date.now();
+        const windowStart = now - (options.interval ?? 60_000);
+        const requestsInWindow = tokenCount.filter((ts) => ts > windowStart);
+
+        if (requestsInWindow.length >= limit) {
+          reject(new Error('Rate limit exceeded'));
+        } else {
+          tokenCache.set(token, [...requestsInWindow, now]);
+          resolve();
+        }
+      }),
+  };
+}
+
+// Pre-configured limiters for API routes
+export const apiRateLimit = rateLimit({
+  interval: 60_000, // 1 minute window
+  uniqueTokenPerInterval: 500,
 });
 
-export const agentRegisterRateLimiter = new Ratelimit({
-  redis: redis,
-  limiter: Ratelimit.fixedWindow(60, '1 h'),
-  analytics: true,
-  prefix: 'ratelimit:agent_register',
-});
-
-export const agentSubmitRateLimiter = new Ratelimit({
-  redis: redis,
-  limiter: Ratelimit.fixedWindow(60, '1 h'),
-  analytics: true,
-  prefix: 'ratelimit:agent_submit',
-});
-
-export const agentCommentRateLimiter = new Ratelimit({
-  redis: redis,
-  limiter: Ratelimit.fixedWindow(120, '1 h'),
-  analytics: true,
-  prefix: 'ratelimit:agent_comment',
-});
-
-export const agentClaimRateLimiter = new Ratelimit({
-  redis: redis,
-  limiter: Ratelimit.fixedWindow(20, '10 m'),
-  analytics: true,
-  prefix: 'ratelimit:agent_claim',
+export const authRateLimit = rateLimit({
+  interval: 60_000,
+  uniqueTokenPerInterval: 100,
 });

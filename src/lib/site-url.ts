@@ -1,19 +1,17 @@
-export function isProductionEnv(): boolean {
-  return (
-    process.env.VERCEL_ENV === 'production' ||
-    process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
-  );
-}
+// =============================================================================
+// A36 Earn — Site URL Helper
+// =============================================================================
 
 export function getSiteUrl(): string {
-  const rawUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    process.env.SITE_URL ??
-    process.env.VERCEL_URL ??
-    process.env.NEXT_PUBLIC_VERCEL_URL ??
-    'https://superteam.fun';
-
-  const withProtocol = rawUrl.startsWith('http') ? rawUrl : `https://${rawUrl}`;
-
-  return withProtocol.replace(/\/+$/, '');
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');
+  }
+  if (process.env.NEXTAUTH_URL) {
+    return process.env.NEXTAUTH_URL.replace(/\/$/, '');
+  }
+  return 'http://localhost:3000';
 }
+
+export const SITE_URL = getSiteUrl();
+export const PLATFORM_NAME = process.env.NEXT_PUBLIC_PLATFORM_NAME ?? 'A36 Earn';
+export const PLATFORM_DOMAIN = 'earn.a36labs.com';

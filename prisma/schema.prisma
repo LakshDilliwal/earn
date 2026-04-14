@@ -1,3 +1,9 @@
+// =============================================================================
+// A36 EARN — PRISMA SCHEMA
+// Platform: earn.a36labs.com
+// DB: MySQL 8.0 (Standard — No PlanetScale, No Edge Runtime)
+// =============================================================================
+
 generator client {
   provider            = "prisma-client"
   output              = "../src/generated/prisma"
@@ -5,9 +11,59 @@ generator client {
 }
 
 datasource db {
-  provider     = "mysql"
-  relationMode = "prisma"
+  provider = "mysql"
+  url      = env("DATABASE_URL")
 }
+
+// =============================================================================
+// A36 CORE MODELS
+// =============================================================================
+
+/// Promo codes for the A36 commission engine.
+/// Admins can create/edit/disable codes via the admin dashboard.
+model PromoCode {
+  id              String    @id @default(uuid())
+  code            String    @unique @db.VarChar(64)
+  discountPercent Float     @default(0) // 0-100. 100 = fully waived fee
+  description     String?   @db.VarChar(255)
+  isActive        Boolean   @default(true)
+  maxUses         Int?      // null = unlimited
+  useCount        Int       @default(0)
+  expiresAt       DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  createdBy       String    // Admin userId
+
+  Bounties Bounties[]
+  Grants   Grants[]
+
+  @@index([code, isActive])
+  @@index([isActive, expiresAt])
+  @@index([createdBy])
+}
+
+/// Verified wallet links for Soft KYC.
+/// A user can link multiple wallets (Solana + EVM chains).
+model UserWallet {
+  id            String   @id @default(uuid())
+  userId        String
+  walletAddress String   @db.VarChar(255)
+  chain         WalletChain
+  isPrimary     Boolean  @default(false)
+  verifiedAt    DateTime @default(now())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([walletAddress, chain])
+  @@index([userId])
+  @@index([walletAddress])
+  @@index([userId, isPrimary])
+}
+
+// =============================================================================
+// LISTINGS
+// =============================================================================
 
 model Bounties {
   id                 String             @id @default(uuid())
@@ -53,30 +109,34 @@ model Bounties {
   compensationType   CompensationType   @default(fixed)
   maxRewardAsk       Float?
   minRewardAsk       Float?
-  template           BountiesTemplates? @relation(fields: [templateId], references: [id])
-  sponsor            Sponsors           @relation(fields: [sponsorId], references: [id])
-  poc                User               @relation("poc", fields: [pocId], references: [id])
   language           String?
   shouldSendEmail    Boolean            @default(true)
   isFndnPaying       Boolean            @default(false)
-  Submission         Submission[]
-  SubscribeBounty    SubscribeBounty[]
-  Hackathon          Hackathon?         @relation(fields: [hackathonId], references: [id])
   winnersAnnouncedAt DateTime?
-  Scouts             Scouts[]
-  Comments           Comment[]
   discordMessageIds  Json?
   telegramMessageIds Json?
   ai                 Json?
   publishedBy        String?
-  XWeeklyThread      String?
-  XStandalonePost    String?
   isPro              Boolean            @default(false)
+  // --- A36 Commission Fields ---
+  feePercent         Float              @default(6) // Platform commission %
+  promoCodeId        String?            // Applied promo code (if any)
+  feeWaived          Boolean            @default(false) // True if 100% discount
+  template           BountiesTemplates? @relation(fields: [templateId], references: [id])
+  sponsor            Sponsors           @relation(fields: [sponsorId], references: [id])
+  poc                User               @relation("poc", fields: [pocId], references: [id])
+  promoCode          PromoCode?         @relation(fields: [promoCodeId], references: [id])
+  Submission         Submission[]
+  SubscribeBounty    SubscribeBounty[]
+  Hackathon          Hackathon?         @relation(fields: [hackathonId], references: [id])
+  Scouts             Scouts[]
+  Comments           Comment[]
 
   @@index([id, slug])
   @@index([pocId])
   @@index([templateId])
   @@index([hackathonId])
+  @@index([promoCodeId])
   @@index([isPublished, isPrivate])
   @@index([deadline, updatedAt])
   @@index([title])
@@ -170,38 +230,6 @@ model TokenMetadata {
   @@index([sortOrder])
 }
 
-model Comment {
-  id               String            @id @default(uuid())
-  message          String            @db.VarChar(5000)
-  authorId         String
-  refType          CommentRefType    @default(BOUNTY)
-  refId            String
-  isActive         Boolean           @default(true)
-  isArchived       Boolean           @default(false)
-  isPinned         Boolean           @default(false)
-  createdAt        DateTime          @default(now())
-  updatedAt        DateTime          @updatedAt
-  replyToId        String?
-  submissionId     String?
-  type             CommentType       @default(NORMAL)
-  author           User              @relation(fields: [authorId], references: [id])
-  repliedTo        Comment?          @relation("CommentReplies", fields: [replyToId], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  replies          Comment[]         @relation("CommentReplies")
-  listing          Bounties?         @relation(fields: [refId], references: [id], map: "Comment_Listing_fkey")
-  submission       Submission?       @relation(fields: [refId], references: [id], map: "Comment_Submission_fkey")
-  pow              PoW?              @relation(fields: [refId], references: [id], map: "Comment_PoW_fkey")
-  GrantApplication GrantApplication? @relation(fields: [refId], references: [id], map: "Comment_GrantApplication_fkey")
-
-  @@index([id, refId])
-  @@index([authorId])
-  @@index([replyToId])
-  @@index([refId, isActive, isArchived, type])
-  @@index([refId, isActive, isArchived, replyToId])
-  @@index([refType, type])
-  @@index([updatedAt(sort: Desc)])
-  @@index([refId, isPinned])
-}
-
 model Grants {
   id                     String             @id @default(uuid())
   title                  String
@@ -226,29 +254,34 @@ model Grants {
   skills                 Json?
   logo                   String?
   region                 String             @default("Global")
-  sponsor                Sponsors           @relation(fields: [sponsorId], references: [id])
-  poc                    User               @relation(fields: [pocId], references: [id])
   questions              Json?
   pocSocials             String?
   status                 GrantStatus        @default(OPEN)
-  GrantApplication       GrantApplication[]
   airtableId             String?
   avgResponseTime        String?            @default("24h")
   isNative               Boolean            @default(false)
   isPrivate              Boolean            @default(false)
   references             Json?
   ai                     Json?
-  GrantTranche           GrantTranche[]
   approverRecordId       String?
   emailSender            String?
   replyToEmail           String?
   emailSalutation        String?
   communityLink          String?
   isPro                  Boolean            @default(false)
-  isST                   Boolean            @default(false)
+  // --- A36 Commission Fields ---
+  feePercent             Float              @default(6)
+  promoCodeId            String?
+  feeWaived              Boolean            @default(false)
+  sponsor                Sponsors           @relation(fields: [sponsorId], references: [id])
+  poc                    User               @relation(fields: [pocId], references: [id])
+  promoCode              PromoCode?         @relation(fields: [promoCodeId], references: [id])
+  GrantApplication       GrantApplication[]
+  GrantTranche           GrantTranche[]
 
   @@index([id, slug])
   @@index([pocId])
+  @@index([promoCodeId])
   @@index([isPublished, isActive, isArchived, status])
   @@index([region, isPublished, isActive])
   @@index([slug])
@@ -281,8 +314,6 @@ model GrantApplication {
   answers             Json?                  @default("[]")
   createdAt           DateTime               @default(now())
   updatedAt           DateTime               @updatedAt
-  user                User                   @relation(fields: [userId], references: [id])
-  grant               Grants                 @relation(fields: [grantId], references: [id])
   label               SubmissionLabels       @default(Pending)
   ask                 Float                  @default(0)
   approvedAmount      Float                  @default(0)
@@ -294,14 +325,16 @@ model GrantApplication {
   totalTranches       Int                    @default(0)
   like                Json?
   likeCount           Int                    @default(0)
-  Comments            Comment[]
   decidedBy           String?
   notes               String?                @db.VarChar(1000)
   ai                  Json?
-  GrantTranche        GrantTranche[]
-  CreditLedger        CreditLedger[]
   lumaLink            String?
   expenseBreakdown    String?                @db.Text
+  user                User                   @relation(fields: [userId], references: [id])
+  grant               Grants                 @relation(fields: [grantId], references: [id])
+  Comments            Comment[]
+  GrantTranche        GrantTranche[]
+  CreditLedger        CreditLedger[]
 
   @@index([likeCount])
   @@index([grantId, userId, applicationStatus])
@@ -324,8 +357,6 @@ model GrantTranche {
   status           GrantTrancheStatus @default(Pending)
   createdAt        DateTime           @default(now())
   updatedAt        DateTime           @updatedAt
-  GrantApplication GrantApplication   @relation(fields: [applicationId], references: [id])
-  Grant            Grants             @relation(fields: [grantId], references: [id])
   approvedAmount   Float?
   decidedAt        DateTime?
   paidAt           DateTime?
@@ -337,6 +368,8 @@ model GrantTranche {
   colosseumLink    String?            @db.VarChar(500)
   githubRepo       String?            @db.VarChar(500)
   aiReceipts       Json?
+  GrantApplication GrantApplication   @relation(fields: [applicationId], references: [id])
+  Grant            Grants             @relation(fields: [grantId], references: [id])
 
   @@index([applicationId])
   @@index([grantId])
@@ -365,15 +398,15 @@ model Submission {
   ask                Float?
   label              SubmissionLabels @default(Unreviewed)
   rewardInUSD        Float            @default(0)
+  ogImage            String?          @db.Text
+  notes              String?          @db.VarChar(10000)
+  ai                 Json?
+  paymentSynced      Boolean          @default(false)
   listing            Bounties         @relation(fields: [listingId], references: [id])
   user               User             @relation(fields: [userId], references: [id])
   agent              Agent?           @relation(fields: [agentId], references: [id])
-  ogImage            String?          @db.Text
-  notes              String?          @db.VarChar(10000)
   Comments           Comment[]
   CreditLedger       CreditLedger[]
-  ai                 Json?
-  paymentSynced      Boolean          @default(false)
 
   @@index([id, listingId])
   @@index([isWinner])
@@ -390,42 +423,14 @@ model Submission {
   @@index([agentId])
 }
 
-model Sponsors {
-  id               String              @id @default(uuid())
-  name             String              @unique
-  slug             String              @unique
-  logo             String?
-  url              String?
-  industry         String
-  twitter          String?
-  bio              String?
-  createdAt        DateTime            @default(now())
-  updatedAt        DateTime            @updatedAt
-  isArchived       Boolean             @default(false)
-  isActive         Boolean             @default(true)
-  entityName       String?
-  isVerified       Boolean             @default(false)
-  isCaution        Boolean             @default(false)
-  verificationInfo Json?
-  Hackathon        Hackathon?
-  UserSponsors     UserSponsors[]
-  Bounties         Bounties[]
-  Templates        BountiesTemplates[]
-  Grants           Grants[]
-  User             User[]
-  UserInvites      UserInvites[]
-  chapter          Chapter?
-
-  @@index([id, slug])
-  @@index([isVerified])
-  @@index([isCaution, isVerified])
-  @@index([isActive, isArchived])
-}
+// =============================================================================
+// USER & AUTH
+// =============================================================================
 
 model User {
   id                 String               @id @default(uuid())
   publicKey          String?
-  walletAddress      String?
+  walletAddress      String?              // Primary wallet (legacy field, kept for compat)
   email              String               @unique
   username           String?              @unique
   photo              String?              @db.Text
@@ -458,11 +463,29 @@ model User {
   hackathonId        String?
   featureModalShown  Boolean              @default(false)
   surveysShown       Json?
-  stRecommended      Boolean              @default(false)
   acceptedTOS        Boolean              @default(false)
   peopleId           String?              @unique
+  isBlocked          Boolean              @default(false)
+  isKYCVerified      Boolean              @default(false)
+  kycName            String?
+  kycCountry         String?
+  kycAddress         String?
+  kycDOB             String?
+  kycIDNumber        String?
+  kycIDType          String?
+  kycVerifiedAt      DateTime?
+  blockRationale     String?
+  linkedTwitter      Json?
+  referralCode       String?              @unique
+  referredById       String?
+  isPro              Boolean              @default(false)
+  isAgent            Boolean              @default(false)
+  // --- A36 Soft KYC Trust Score ---
+  kycTrustScore      Int                  @default(0) // 0-100 computed from linked socials + wallets
   currentSponsor     Sponsors?            @relation(fields: [currentSponsorId], references: [id])
   people             People?              @relation("UserToPeople", fields: [peopleId], references: [id])
+  referredBy         User?                @relation("UserReferrals", fields: [referredById], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  referrals          User[]               @relation("UserReferrals")
   accounts           Account[]
   sessions           Session[]
   UserSponsors       UserSponsors[]
@@ -480,29 +503,12 @@ model User {
   Scouts             Scouts[]
   GrantApplication   GrantApplication[]
   SubscribeHackathon SubscribeHackathon[]
-  isBlocked          Boolean              @default(false)
-  privyDid           String               @unique
-  isKYCVerified      Boolean              @default(false)
-  kycName            String?
-  kycCountry         String?
-  kycAddress         String?
-  kycDOB             String?
-  kycIDNumber        String?
-  kycIDType          String?
-  kycVerifiedAt      DateTime?
   CreditLedger       CreditLedger[]
-  blockRationale     String?
-  linkedTwitter      Json?
-  referralCode       String?              @unique
-  referredById       String?
-  referredBy         User?                @relation("UserReferrals", fields: [referredById], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  referrals          User[]               @relation("UserReferrals")
   telegramUsers      TelegramUser[]
   emailLogs          emailLogs[]
-  isPro              Boolean              @default(false)
-  isAgent            Boolean              @default(false)
   agentProfile       Agent?
   claimedAgents      Agent[]              @relation("AgentClaimedBy")
+  UserWallets        UserWallet[]         // A36 Soft KYC wallet links
 
   @@index([currentSponsorId])
   @@index([hackathonId])
@@ -512,6 +518,7 @@ model User {
   @@index([lastName])
   @@index([location])
   @@index([referredById])
+  @@index([kycTrustScore])
 }
 
 model Account {
@@ -550,6 +557,74 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 
+// =============================================================================
+// SPONSORS, TALENT & COMMUNITY
+// =============================================================================
+
+model Sponsors {
+  id               String              @id @default(uuid())
+  name             String              @unique
+  slug             String              @unique
+  logo             String?
+  url              String?
+  industry         String
+  twitter          String?
+  bio              String?
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+  isArchived       Boolean             @default(false)
+  isActive         Boolean             @default(true)
+  entityName       String?
+  isVerified       Boolean             @default(false)
+  isCaution        Boolean             @default(false)
+  verificationInfo Json?
+  Hackathon        Hackathon?
+  UserSponsors     UserSponsors[]
+  Bounties         Bounties[]
+  Templates        BountiesTemplates[]
+  Grants           Grants[]
+  User             User[]
+  UserInvites      UserInvites[]
+  chapter          Chapter?
+
+  @@index([id, slug])
+  @@index([isVerified])
+  @@index([isCaution, isVerified])
+  @@index([isActive, isArchived])
+}
+
+model Comment {
+  id               String            @id @default(uuid())
+  message          String            @db.VarChar(5000)
+  authorId         String
+  refType          CommentRefType    @default(BOUNTY)
+  refId            String
+  isActive         Boolean           @default(true)
+  isArchived       Boolean           @default(false)
+  isPinned         Boolean           @default(false)
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  replyToId        String?
+  submissionId     String?
+  type             CommentType       @default(NORMAL)
+  author           User              @relation(fields: [authorId], references: [id])
+  repliedTo        Comment?          @relation("CommentReplies", fields: [replyToId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  replies          Comment[]         @relation("CommentReplies")
+  listing          Bounties?         @relation(fields: [refId], references: [id], map: "Comment_Listing_fkey")
+  submission       Submission?       @relation(fields: [refId], references: [id], map: "Comment_Submission_fkey")
+  pow              PoW?              @relation(fields: [refId], references: [id], map: "Comment_PoW_fkey")
+  GrantApplication GrantApplication? @relation(fields: [refId], references: [id], map: "Comment_GrantApplication_fkey")
+
+  @@index([id, refId])
+  @@index([authorId])
+  @@index([replyToId])
+  @@index([refId, isActive, isArchived, type])
+  @@index([refId, isActive, isArchived, replyToId])
+  @@index([refType, type])
+  @@index([updatedAt(sort: Desc)])
+  @@index([refId, isPinned])
+}
+
 model Scouts {
   id            String   @id @default(uuid())
   userId        String
@@ -584,10 +659,9 @@ model Agent {
   metadata        Json?
   createdAt       DateTime    @default(now())
   updatedAt       DateTime    @updatedAt
-
-  user          User         @relation(fields: [userId], references: [id])
-  claimedByUser User?        @relation("AgentClaimedBy", fields: [claimedByUserId], references: [id])
-  submissions   Submission[]
+  user            User        @relation(fields: [userId], references: [id])
+  claimedByUser   User?       @relation("AgentClaimedBy", fields: [claimedByUserId], references: [id])
+  submissions     Submission[]
 
   @@index([userId])
   @@index([claimedByUserId])
@@ -625,8 +699,8 @@ model PoW {
   updatedAt   DateTime  @updatedAt
   like        Json?
   likeCount   Int       @default(0)
-  user        User      @relation(fields: [userId], references: [id])
   ogImage     String?   @db.Text
+  user        User      @relation(fields: [userId], references: [id])
   Comments    Comment[]
 
   @@index([createdAt])
@@ -775,10 +849,10 @@ model CreditLedger {
   change         Int
   effectiveMonth DateTime
   createdAt      DateTime          @default(now())
+  decision       SubmissionStatus?
   user           User              @relation(fields: [userId], references: [id])
   submission     Submission?       @relation(fields: [submissionId], references: [id])
   application    GrantApplication? @relation(fields: [applicationId], references: [id])
-  decision       SubmissionStatus?
 
   @@index([userId])
   @@index([submissionId])
@@ -796,59 +870,50 @@ model TelegramUser {
   preferences  Json?
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
-
-  user   User?   @relation(fields: [userId], references: [id])
-  userId String?
+  userId       String?
+  user         User?    @relation(fields: [userId], references: [id])
 
   @@index([userId])
   @@index([isSubscribed])
 }
 
-model ProPerks {
-  id          String @id @default(uuid())
-  header      String
-  description String
-  cta         String
-  ctaLink     String
-  logo        String
-}
+// =============================================================================
+// COMMUNITY / CHAPTER (kept for data compat, stripped of Superteam references)
+// =============================================================================
 
 model Chapter {
-  id                  String             @id @default(uuid()) @db.Char(36)
-  name                String             @unique @db.VarChar(100)
-  slug                String             @unique @db.VarChar(120)
-  region              String             @db.VarChar(100)
-  displayValue        String?            @db.VarChar(100)
-  code                String?            @db.VarChar(40)
-  countries           Json?
-  memberForm          String?            @db.VarChar(255)
-  active              Boolean            @default(true)
-  community           String?            @db.VarChar(255)
-  pocName             String?            @db.VarChar(255)
-  pocEmail            String?            @db.VarChar(255)
-  twitterUsername     String?            @db.VarChar(100)
-  link                String?            @db.VarChar(255)
-  icons               String?            @db.Text
-  banner              String?            @db.Text
-  hello               String?            @db.VarChar(80)
-  nationality         String?            @db.VarChar(120)
-  airtableBaseId      String?            @db.VarChar(50)
-  tgChatId            String?
-  tgThreadId          String?
-  registeredBy        String?
-  sponsorId           String?            @unique
-  createdAt           DateTime           @default(now())
-  updatedAt           DateTime           @updatedAt
-  sponsor             Sponsors?          @relation(fields: [sponsorId], references: [id])
-  people              People[]
-  communityEarnings   CommunityEarning[]
-  events              Event[]
-  jobs                Job[]
-  vcExternalGrants    VcExternalGrant[]
-  lumaEventReviews    LumaEventReview[]
-  memberInvites       MemberInvite[]
-  welcomeEmailSubject String?            @db.VarChar(255)
-  welcomeEmailBody    String?            @db.Text
+  id              String           @id @default(uuid()) @db.Char(36)
+  name            String           @unique @db.VarChar(100)
+  slug            String           @unique @db.VarChar(120)
+  region          String           @db.VarChar(100)
+  displayValue    String?          @db.VarChar(100)
+  code            String?          @db.VarChar(40)
+  countries       Json?
+  memberForm      String?          @db.VarChar(255)
+  active          Boolean          @default(true)
+  community       String?          @db.VarChar(255)
+  pocName         String?          @db.VarChar(255)
+  pocEmail        String?          @db.VarChar(255)
+  twitterUsername String?          @db.VarChar(100)
+  link            String?          @db.VarChar(255)
+  icons           String?          @db.Text
+  banner          String?          @db.Text
+  hello           String?          @db.VarChar(80)
+  nationality     String?          @db.VarChar(120)
+  airtableBaseId  String?          @db.VarChar(50)
+  tgChatId        String?
+  tgThreadId      String?
+  registeredBy    String?
+  sponsorId       String?          @unique
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  welcomeEmailSubject String?      @db.VarChar(255)
+  welcomeEmailBody    String?      @db.Text
+  sponsor         Sponsors?        @relation(fields: [sponsorId], references: [id])
+  people          People[]
+  events          Event[]
+  jobs            Job[]
+  memberInvites   MemberInvite[]
 
   @@index([region])
 }
@@ -871,30 +936,28 @@ model MemberInvite {
 }
 
 model People {
-  id                String             @id @default(uuid()) @db.Char(36)
-  name              String             @db.VarChar(255)
-  email             String?            @db.VarChar(255)
-  handle            String?            @db.VarChar(255)
-  region            String             @db.VarChar(100)
-  chapterId         String?            @db.Char(36)
-  type              String?            @db.VarChar(50)
-  xUsername         String?            @db.VarChar(100)
-  telegram          String?            @db.VarChar(100)
-  discord           String?            @db.VarChar(100)
-  solWallet         String?            @db.VarChar(50)
-  city              String?            @db.VarChar(100)
-  skills            String?            @db.Text
-  proofOfWork       String?            @db.Text
-  bestWorkUrl       String?            @db.VarChar(500)
-  source            String             @default("Legacy") @db.VarChar(50)
-  airtableRecordId  String             @db.VarChar(50)
-  createdAt         DateTime           @default(now())
-  updatedAt         DateTime           @default(now()) @updatedAt
-  communityEarnings CommunityEarning[]
-  jobs              Job[]
-  vcExternalGrants  VcExternalGrant[]
-  chapter           Chapter?           @relation(fields: [chapterId], references: [id])
-  user              User?              @relation("UserToPeople")
+  id               String   @id @default(uuid()) @db.Char(36)
+  name             String   @db.VarChar(255)
+  email            String?  @db.VarChar(255)
+  handle           String?  @db.VarChar(255)
+  region           String   @db.VarChar(100)
+  chapterId        String?  @db.Char(36)
+  type             String?  @db.VarChar(50)
+  xUsername        String?  @db.VarChar(100)
+  telegram         String?  @db.VarChar(100)
+  discord          String?  @db.VarChar(100)
+  solWallet        String?  @db.VarChar(50)
+  city             String?  @db.VarChar(100)
+  skills           String?  @db.Text
+  proofOfWork      String?  @db.Text
+  bestWorkUrl      String?  @db.VarChar(500)
+  source           String   @default("Legacy") @db.VarChar(50)
+  airtableRecordId String   @db.VarChar(50)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @default(now()) @updatedAt
+  jobs             Job[]
+  chapter          Chapter? @relation(fields: [chapterId], references: [id])
+  user             User?    @relation("UserToPeople")
 
   @@unique([airtableRecordId])
   @@index([chapterId])
@@ -905,43 +968,26 @@ model People {
   @@index([type, handle])
 }
 
-model CommunityEarning {
-  id             String   @id @default(uuid()) @db.Char(36)
-  createdAt      DateTime @default(now())
-  superteamId    String   @db.Char(36)
-  earningTitle   String   @db.VarChar(255)
-  tokenAmount    Decimal  @db.Decimal(15, 2)
-  tokenName      String   @db.VarChar(50)
-  category       String   @db.VarChar(50)
-  dateOfEarning  DateTime @db.Date
-  peopleId       String   @db.Char(36)
-  sponsorName    String   @db.VarChar(255)
-  contractLength Int?
-  isVerified     Int      @default(1)
-  chapter        Chapter  @relation(fields: [superteamId], references: [id])
-  people         People   @relation(fields: [peopleId], references: [id])
-}
-
 model Event {
-  id              String    @id @default(uuid()) @db.Char(36)
-  createdAt       DateTime  @default(now())
-  superteamId     String    @db.Char(36)
-  eventTitle      String    @db.VarChar(255)
-  eventLumaLink   String?   @db.VarChar(500)
-  eventDate       DateTime  @db.Date
-  eventType       String    @db.VarChar(50)
-  eventCategory   String    @db.VarChar(100)
+  id              String   @id @default(uuid()) @db.Char(36)
+  createdAt       DateTime @default(now())
+  chapterId       String   @db.Char(36)
+  eventTitle      String   @db.VarChar(255)
+  eventLumaLink   String?  @db.VarChar(500)
+  eventDate       DateTime @db.Date
+  eventType       String   @db.VarChar(50)
+  eventCategory   String   @db.VarChar(100)
   eventAttendance Int
-  isVerified      Int       @default(1)
-  lumaEventId     String?   @unique @db.VarChar(100)
+  isVerified      Int      @default(1)
+  lumaEventId     String?  @unique @db.VarChar(100)
   lastSyncedAt    DateTime?
-  chapter         Chapter   @relation(fields: [superteamId], references: [id])
+  chapter         Chapter  @relation(fields: [chapterId], references: [id])
 }
 
 model Job {
   id          String   @id @default(uuid()) @db.Char(36)
   createdAt   DateTime @default(now())
-  superteamId String   @db.Char(36)
+  chapterId   String   @db.Char(36)
   peopleId    String   @db.Char(36)
   companyName String   @db.VarChar(255)
   roleTitle   String   @db.VarChar(255)
@@ -949,41 +995,11 @@ model Job {
   roleTier    String   @db.VarChar(100)
   salary      Int      @default(0)
   isVerified  Int      @default(1)
-  chapter     Chapter  @relation(fields: [superteamId], references: [id])
+  chapter     Chapter  @relation(fields: [chapterId], references: [id])
   people      People   @relation(fields: [peopleId], references: [id])
 }
 
-model VcExternalGrant {
-  id                     String   @id @default(uuid()) @db.Char(36)
-  createdAt              DateTime @default(now())
-  superteamId            String   @db.Char(36)
-  projectName            String   @db.VarChar(255)
-  projectUrl             String   @db.VarChar(500)
-  vcGrantor              String   @db.VarChar(255)
-  peopleId               String   @db.Char(36)
-  amountRaisedUsd        Decimal  @db.Decimal(15, 2)
-  fundingAnnouncementUrl String?  @db.VarChar(500)
-  isVerified             Int      @default(1)
-  chapter                Chapter  @relation(fields: [superteamId], references: [id])
-  people                 People   @relation(fields: [peopleId], references: [id])
-}
-
-model LumaEventReview {
-  id               String   @id @default(uuid()) @db.Char(36)
-  createdAt        DateTime @default(now())
-  superteamId      String   @db.Char(36)
-  lumaEventId      String   @db.VarChar(100)
-  lumaEventUrl     String   @db.VarChar(500)
-  eventTitle       String   @db.VarChar(255)
-  analysisApproved Int
-  analysisScore    Int
-  analysisFeedback String?  @db.VarChar(2000)
-  addedToCalendar  Int      @default(0)
-  isVerified       Int      @default(1)
-  chapter          Chapter  @relation(fields: [superteamId], references: [id])
-}
-
-model StatsSlackMessage {
+model StatsMessage {
   id        String   @id @default(uuid()) @db.Char(36)
   messageTs String   @db.VarChar(50)
   channelId String   @db.VarChar(50)
@@ -994,31 +1010,17 @@ model StatsSlackMessage {
   @@unique([messageTs])
 }
 
-model RegionSnapshot {
-  id               String   @id @default(uuid()) @db.Char(36)
-  cronDate         DateTime @db.Date
-  region           String   @db.VarChar(100)
-  totalGdp         Decimal  @default(0) @db.Decimal(15, 2)
-  organicGdp       Decimal  @default(0) @db.Decimal(15, 2)
-  inorganicGdp     Decimal  @default(0) @db.Decimal(15, 2)
-  totalJobs        Decimal  @default(0) @db.Decimal(15, 2)
-  totalJobsCount   Int      @default(0)
-  totalHackathons  Decimal  @default(0) @db.Decimal(15, 2)
-  totalContracts   Decimal  @default(0) @db.Decimal(15, 2)
-  totalFunding     Decimal  @default(0) @db.Decimal(15, 2)
-  virtualAttendees Int      @default(0)
-  irlAttendees     Int      @default(0)
-  totalAttendees   Int      @default(0)
-  virtualEvents    Int      @default(0)
-  irlEvents        Int      @default(0)
-  totalEvents      Int      @default(0)
-  members          Int      @default(0)
-  twitter          Int      @default(0)
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+// =============================================================================
+// ENUMS
+// =============================================================================
 
-  @@unique([cronDate, region])
-  @@index([region, cronDate])
+enum WalletChain {
+  SOLANA
+  ETHEREUM
+  POLYGON
+  BASE
+  ARBITRUM
+  OPTIMISM
 }
 
 enum CreditEventType {
@@ -1066,11 +1068,6 @@ enum EmailType {
   REFERRAL_ANNOUNCEMENT
   PRO_FEATURE_ANNOUNCEMENT
   GRANTEE_ACTIVATION
-  SPONSOR_ANNOUNCEMENT_150K
-  KALSHI_GRANTS
-  PENDING_GRANT_USDG
-  APPROVED_GRANT_USDG
-  PASSKEY_DEPRECATION
 }
 
 enum Role {
