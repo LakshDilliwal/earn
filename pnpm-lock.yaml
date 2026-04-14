@@ -49,6 +49,9 @@ importers:
       '@phosphor-icons/react':
         specifier: ^2.1.10
         version: 2.1.10(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@prisma/adapter-mariadb':
+        specifier: ^7.7.0
+        version: 7.7.0
       '@prisma/client':
         specifier: ^7.4.2
         version: 7.4.2(prisma@7.4.2(@types/react@19.2.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.8.3))(typescript@5.8.3)
@@ -2299,6 +2302,9 @@ packages:
       react: '>= 16.8'
       react-dom: '>= 16.8'
 
+  '@prisma/adapter-mariadb@7.7.0':
+    resolution: {integrity: sha512-BlugprCUNFGelP7t0uQEHkC5ZcNmgUxWi6xpkjWKUS9gESGBDF3mNdYFqRc2zS9w7pC83gpNxSY51A7gCY2HdA==}
+
   '@prisma/client-runtime-utils@7.4.2':
     resolution: {integrity: sha512-cID+rzOEb38VyMsx5LwJMEY4NGIrWCNpKu/0ImbeooQ2Px7TI+kOt7cm0NelxUzF2V41UVVXAmYjANZQtCu1/Q==}
 
@@ -2323,8 +2329,14 @@ packages:
   '@prisma/debug@7.4.2':
     resolution: {integrity: sha512-aP7qzu+g/JnbF6U69LMwHoUkELiserKmWsE2shYuEpNUJ4GrtxBCvZwCyCBHFSH2kLTF2l1goBlBh4wuvRq62w==}
 
+  '@prisma/debug@7.7.0':
+    resolution: {integrity: sha512-12J62XdqCmpiwJHhHdQxZeY3ckVCWIFmcJP8hg5dPTceeiQ0wiojXGFYTluKqFQfu46fRLgb/rLALZMAx3+dTA==}
+
   '@prisma/dev@0.20.0':
     resolution: {integrity: sha512-ovlBYwWor0OzG+yH4J3Ot+AneD818BttLA+Ii7wjbcLHUrnC4tbUPVGyNd3c/+71KETPKZfjhkTSpdS15dmXNQ==}
+
+  '@prisma/driver-adapter-utils@7.7.0':
+    resolution: {integrity: sha512-gZXREeu6mOk7zXfGFJgh86p7Vhj0sXNKp+4Cg1tWYo7V2dfncP2qxS2BiTmbIIha8xPqItkl0WSw38RuSq1HoQ==}
 
   '@prisma/engines-version@7.5.0-10.94a226be1cf2967af2541cca5529f0f7ba866919':
     resolution: {integrity: sha512-5FIKY3KoYQlBuZC2yc16EXfVRQ8HY+fLqgxkYfWCtKhRb3ajCRzP/rPeoSx11+NueJDANdh4hjY36mdmrTcGSg==}
@@ -7555,6 +7567,9 @@ packages:
   lowlight@3.3.0:
     resolution: {integrity: sha512-0JNhgFoPvP6U6lE/UdVsSq99tn6DhjjpAj5MxG49ewd2mOBVtwWYIT8ClyABhq198aXXODMU6Ox8DrGy/CpTZQ==}
 
+  lru-cache@10.4.3:
+    resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
+
   lru-cache@11.3.5:
     resolution: {integrity: sha512-NxVFwLAnrd9i7KUBxC4DrUhmgjzOs+1Qm50D3oF1/oL+r1NpZ4gA7xvG0/zJ8evR7zIKn4vLf7qTNduWFtCrRw==}
     engines: {node: 20 || >=22}
@@ -7591,6 +7606,10 @@ packages:
 
   makeerror@1.0.12:
     resolution: {integrity: sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg==}
+
+  mariadb@3.4.5:
+    resolution: {integrity: sha512-gThTYkhIS5rRqkVr+Y0cIdzr+GRqJ9sA2Q34e0yzmyhMCwyApf3OKAC1jnF23aSlIOqJuyaUFUcj7O1qZslmmQ==}
+    engines: {node: '>= 14'}
 
   markdown-it@14.1.0:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
@@ -11898,6 +11917,11 @@ snapshots:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
 
+  '@prisma/adapter-mariadb@7.7.0':
+    dependencies:
+      '@prisma/driver-adapter-utils': 7.7.0
+      mariadb: 3.4.5
+
   '@prisma/client-runtime-utils@7.4.2': {}
 
   '@prisma/client@7.4.2(prisma@7.4.2(@types/react@19.2.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.8.3))(typescript@5.8.3)':
@@ -11920,6 +11944,8 @@ snapshots:
 
   '@prisma/debug@7.4.2': {}
 
+  '@prisma/debug@7.7.0': {}
+
   '@prisma/dev@0.20.0(typescript@5.8.3)':
     dependencies:
       '@electric-sql/pglite': 0.3.15
@@ -11941,6 +11967,10 @@ snapshots:
       zeptomatch: 2.1.0
     transitivePeerDependencies:
       - typescript
+
+  '@prisma/driver-adapter-utils@7.7.0':
+    dependencies:
+      '@prisma/debug': 7.7.0
 
   '@prisma/engines-version@7.5.0-10.94a226be1cf2967af2541cca5529f0f7ba866919': {}
 
@@ -19279,6 +19309,8 @@ snapshots:
       devlop: 1.1.0
       highlight.js: 11.11.1
 
+  lru-cache@10.4.3: {}
+
   lru-cache@11.3.5: {}
 
   lru-cache@5.1.1:
@@ -19312,6 +19344,14 @@ snapshots:
   makeerror@1.0.12:
     dependencies:
       tmpl: 1.0.5
+
+  mariadb@3.4.5:
+    dependencies:
+      '@types/geojson': 7946.0.16
+      '@types/node': 24.9.2
+      denque: 2.1.0
+      iconv-lite: 0.6.3
+      lru-cache: 10.4.3
 
   markdown-it@14.1.0:
     dependencies:
