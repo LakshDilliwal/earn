@@ -8,11 +8,11 @@ generator client {
   provider            = "prisma-client"
   output              = "../src/generated/prisma"
   importFileExtension = "ts"
+  engineType          = "library"
 }
 
 datasource db {
   provider = "mysql"
-
 }
 
 // =============================================================================
@@ -481,7 +481,7 @@ model User {
   isPro              Boolean              @default(false)
   isAgent            Boolean              @default(false)
   // --- A36 Soft KYC Trust Score ---
-  kycTrustScore      Int                  @default(0) // 0-100 computed from linked socials + wallets
+  kycTrustScore      Int                  @default(0)
   currentSponsor     Sponsors?            @relation(fields: [currentSponsorId], references: [id])
   people             People?              @relation("UserToPeople", fields: [peopleId], references: [id])
   referredBy         User?                @relation("UserReferrals", fields: [referredById], references: [id], onDelete: NoAction, onUpdate: NoAction)
@@ -508,7 +508,7 @@ model User {
   emailLogs          emailLogs[]
   agentProfile       Agent?
   claimedAgents      Agent[]              @relation("AgentClaimedBy")
-  UserWallets        UserWallet[]         // A36 Soft KYC wallet links
+  UserWallets        UserWallet[]
 
   @@index([currentSponsorId])
   @@index([hackathonId])
@@ -878,7 +878,7 @@ model TelegramUser {
 }
 
 // =============================================================================
-// COMMUNITY / CHAPTER (kept for data compat, stripped of Superteam references)
+// COMMUNITY / CHAPTER
 // =============================================================================
 
 model Chapter {
