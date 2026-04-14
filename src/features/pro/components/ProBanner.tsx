@@ -1,4 +1,4 @@
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import { useQuery } from '@tanstack/react-query';
 import { IBM_Plex_Serif } from 'next/font/google';
 

@@ -1,7 +1,7 @@
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import { useQuery } from '@tanstack/react-query';
 import { useAtom, useSetAtom } from 'jotai';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { UserFlag } from '@/components/shared/UserFlag';

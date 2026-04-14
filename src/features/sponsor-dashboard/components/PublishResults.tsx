@@ -2,7 +2,7 @@ import { useQueryClient } from '@tanstack/react-query';
 import { useAtomValue } from 'jotai';
 import { AlertTriangle, Check, CheckCircle2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect, useState } from 'react';
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';

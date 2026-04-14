@@ -1,5 +1,5 @@
 import { useRouter, useSearchParams } from 'next/navigation';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useCallback, useMemo } from 'react';
 
 import {

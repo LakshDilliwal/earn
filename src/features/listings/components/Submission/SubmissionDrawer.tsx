@@ -3,7 +3,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
 import { Loader2, Lock, X } from 'lucide-react';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { type JSX, useEffect, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';

@@ -1,4 +1,4 @@
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 

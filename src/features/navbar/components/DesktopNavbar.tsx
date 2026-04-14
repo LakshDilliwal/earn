@@ -1,8 +1,8 @@
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import { Gift } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect, useMemo, useState } from 'react';
 
 import IoSearchOutline from '@/components/icons/IoSearchOutline';

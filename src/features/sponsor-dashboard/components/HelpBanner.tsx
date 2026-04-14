@@ -1,4 +1,4 @@
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 
 import MdOutlineChatBubbleOutline from '@/components/icons/MdOutlineChatBubbleOutline';
 import { LocalImage } from '@/components/ui/local-image';

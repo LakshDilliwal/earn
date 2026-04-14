@@ -4,7 +4,7 @@ import { ExternalLink } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect, useMemo, useState } from 'react';
 
 import { ErrorSection } from '@/components/shared/ErrorSection';

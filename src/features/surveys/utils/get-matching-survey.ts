@@ -1,4 +1,4 @@
-import { type Survey } from 'posthog-js';
+import { type Survey } from '@/lib/posthog';
 
 export function getMatchingSurvey(
   surveys: Survey[],

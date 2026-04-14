@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import debounce from 'lodash.debounce';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect, useRef, useState } from 'react';
 
 import { UserFlag } from '@/components/shared/UserFlag';

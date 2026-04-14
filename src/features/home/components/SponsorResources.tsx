@@ -1,6 +1,6 @@
 import { HandCoins, Megaphone, Sparkles } from 'lucide-react';
 import Link from 'next/link';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 
 export function SponsorResources() {
   return (

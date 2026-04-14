@@ -1,4 +1,4 @@
-import { useLoginWithOAuth } from '@privy-io/react-auth';
+import { useLoginWithOAuth } from '@/lib/privy-react';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/router';

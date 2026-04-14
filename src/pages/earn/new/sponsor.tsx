@@ -1,11 +1,11 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import { useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 import { Info, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';

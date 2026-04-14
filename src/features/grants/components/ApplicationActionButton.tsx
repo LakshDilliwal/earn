@@ -1,7 +1,7 @@
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import { useQuery } from '@tanstack/react-query';
 import { AlertTriangle, Loader2, Lock, Pencil } from 'lucide-react';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 
 import { Button } from '@/components/ui/button';
 import { useDisclosure } from '@/hooks/use-disclosure';

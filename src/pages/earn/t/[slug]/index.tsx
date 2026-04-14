@@ -211,7 +211,7 @@ function TalentProfile({ talent, stats, bgIndex }: TalentProps) {
   useEffect(() => {
     let ignore = false;
     if (user?.id && talent?.id && user.id !== talent?.id) {
-      import('posthog-js').then(({ default: posthog }) => {
+      import('@/lib/posthog').then(({ default: posthog }) => {
         if (!ignore) posthog.capture('clicked profile_talent');
       });
     }

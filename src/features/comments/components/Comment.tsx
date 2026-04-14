@@ -1,6 +1,6 @@
 import { AlertCircle, ChevronDown, Loader2, Pin, Trash2 } from 'lucide-react';
 import Link from 'next/link';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { VerifiedBadge } from '@/components/shared/VerifiedBadge';

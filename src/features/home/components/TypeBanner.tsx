@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 
 import { Button } from '@/components/ui/button';
 import { ASSET_URL } from '@/constants/ASSET_URL';

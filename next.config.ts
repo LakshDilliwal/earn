@@ -69,7 +69,6 @@ const nextConfig: NextConfig = {
       'lowlight',
       'lucide-react',
       'nprogress',
-      'posthog-js',
       'react-day-picker',
       'react-hook-form',
       'react-select',

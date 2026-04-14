@@ -1,7 +1,7 @@
-import { useMfaEnrollment, usePrivy } from '@privy-io/react-auth';
+import { useMfaEnrollment, usePrivy } from '@/lib/privy-react';
 import { ArrowLeft, ArrowUpRight, CopyIcon, X } from 'lucide-react';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useState } from 'react';
 import { toast } from 'sonner';
 

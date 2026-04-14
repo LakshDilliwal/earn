@@ -1,8 +1,8 @@
-import { useLoginWithOAuth } from '@privy-io/react-auth';
+import { useLoginWithOAuth } from '@/lib/privy-react';
 import { useSetAtom } from 'jotai';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { type Dispatch, type SetStateAction, useState } from 'react';
 
 import MdOutlineEmail from '@/components/icons/MdOutlineEmail';

@@ -1,5 +1,5 @@
 import type { GetServerSideProps } from 'next';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect } from 'react';
 
 import { JsonLd } from '@/components/shared/JsonLd';

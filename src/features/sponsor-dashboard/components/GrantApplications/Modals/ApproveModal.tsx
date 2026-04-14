@@ -1,5 +1,5 @@
 import { Check, ChevronDown, ChevronUp } from 'lucide-react';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import React, { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';

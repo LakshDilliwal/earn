@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { Rocket } from 'lucide-react';
 import Link from 'next/link';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 
 import { Button } from '@/components/ui/button';
 import { JTTG } from '@/constants/Telegram';

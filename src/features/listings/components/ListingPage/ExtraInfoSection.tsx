@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 
 import { type ParentSkills } from '@/interface/skills';
 import { dayjs } from '@/utils/dayjs';

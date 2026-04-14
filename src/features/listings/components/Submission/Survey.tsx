@@ -1,4 +1,4 @@
-import posthog, { type SurveyQuestion } from 'posthog-js';
+import posthog, { type SurveyQuestion } from '@/lib/posthog';
 import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';

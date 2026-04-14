@@ -2,7 +2,7 @@ import { format } from 'date-fns';
 import { Check, Minus, Plus, Undo } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { type ReactNode, useEffect, useState } from 'react';
 
 import BsThreeDotsVertical from '@/components/icons/BsThreeDotsVertical';

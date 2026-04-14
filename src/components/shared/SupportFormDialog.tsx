@@ -1,6 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import IsoDomPurify from 'isomorphic-dompurify';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';

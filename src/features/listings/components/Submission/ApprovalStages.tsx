@@ -1,4 +1,4 @@
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import { useQuery } from '@tanstack/react-query';
 
 import FaCheck from '@/components/icons/FaCheck';

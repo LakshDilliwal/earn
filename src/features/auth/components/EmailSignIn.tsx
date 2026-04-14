@@ -1,7 +1,7 @@
-import { useLoginWithEmail } from '@privy-io/react-auth';
+import { useLoginWithEmail } from '@/lib/privy-react';
 import { useSetAtom } from 'jotai';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import React, { useState } from 'react';
 
 import { Button } from '@/components/ui/button';

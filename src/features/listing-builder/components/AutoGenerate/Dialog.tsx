@@ -5,7 +5,7 @@ import { useAtom, useSetAtom } from 'jotai';
 import { marked } from 'marked';
 import { AnimatePresence, motion } from 'motion/react';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import {

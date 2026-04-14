@@ -1,6 +1,6 @@
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import { useAtom, useSetAtom } from 'jotai';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect, useRef, useState } from 'react';
 
 import {

@@ -1,10 +1,10 @@
 'use client';
 
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect } from 'react';
 import { getCookie, removeCookie, setCookie } from 'typescript-cookie';
 

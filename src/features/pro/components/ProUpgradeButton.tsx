@@ -1,6 +1,6 @@
 import { useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useRef, useState } from 'react';
 import { toast } from 'sonner';
 

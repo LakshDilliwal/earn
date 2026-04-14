@@ -9,7 +9,7 @@ import {
   Plus,
   Search,
 } from 'lucide-react';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { toast } from 'sonner';
 

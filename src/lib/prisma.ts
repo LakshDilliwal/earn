@@ -2,7 +2,7 @@
 // A36 Earn — Prisma Client Singleton
 // Standard Node.js MySQL client. No PlanetScale adapter. No Edge runtime.
 // =============================================================================
-import { PrismaClient } from '../generated/prisma';
+import { PrismaClient } from '@/generated/prisma/client';
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect, useRef, useState } from 'react';
 
 import MdArrowForward from '@/components/icons/MdArrowForward';

@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { differenceInHours } from 'date-fns';
 import { RocketIcon } from 'lucide-react';
 import Link from 'next/link';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 
 import { Button } from '@/components/ui/button';
 import { Tooltip } from '@/components/ui/tooltip';

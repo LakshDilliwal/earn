@@ -1,5 +1,5 @@
 'use client';
-import { getAccessToken } from '@privy-io/react-auth';
+import { getAccessToken } from '@/lib/privy-react';
 import axios from 'axios';
 
 const api = axios.create();

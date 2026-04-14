@@ -1,4 +1,4 @@
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import React, { useCallback, useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';

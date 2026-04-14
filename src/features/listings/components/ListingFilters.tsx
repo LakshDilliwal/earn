@@ -1,5 +1,5 @@
 import { LucideListFilter } from 'lucide-react';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 
 import {
   DropdownMenu,

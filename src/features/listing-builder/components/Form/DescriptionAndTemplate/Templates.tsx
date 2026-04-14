@@ -3,7 +3,7 @@ import { useAtomValue } from 'jotai';
 import { ChevronRight, Eye, LayoutGrid, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect, useState } from 'react';
 import { useWatch } from 'react-hook-form';
 

@@ -1,7 +1,7 @@
 import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect } from 'react';
 
 import { SupportFormDialog } from '@/components/shared/SupportFormDialog';

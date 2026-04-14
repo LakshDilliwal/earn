@@ -1,8 +1,8 @@
 'use client';
 
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import { useQuery } from '@tanstack/react-query';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { Button } from '@/components/ui/button';

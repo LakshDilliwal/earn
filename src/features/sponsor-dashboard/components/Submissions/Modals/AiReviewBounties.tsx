@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { Check, InfoIcon, ScanText, Wand2, XCircle } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { AnimateChangeInHeight } from '@/components/shared/AnimateChangeInHeight';

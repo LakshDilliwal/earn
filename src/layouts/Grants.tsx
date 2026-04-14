@@ -3,7 +3,7 @@ import { useAtom } from 'jotai';
 import { ExternalLink } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect } from 'react';
 
 import { EmptySection } from '@/components/shared/EmptySection';

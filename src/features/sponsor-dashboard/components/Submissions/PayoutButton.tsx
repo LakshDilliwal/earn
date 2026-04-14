@@ -33,9 +33,9 @@ import type { SolanaSignAndSendTransactionFeature } from '@solana/wallet-standar
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import bs58 from 'bs58';
 import { Loader2 } from 'lucide-react';
-import { log } from 'next-axiom';
+import { log } from '@/lib/axiom';
 import dynamic from 'next/dynamic';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useState } from 'react';
 
 import {

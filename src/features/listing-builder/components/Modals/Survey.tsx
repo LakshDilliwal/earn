@@ -1,6 +1,6 @@
 import { Loader, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
-import posthog, { type Survey } from 'posthog-js';
+import posthog, { type Survey } from '@/lib/posthog';
 import { useEffect, useState } from 'react';
 
 import BiCheck from '@/components/icons/BiCheck';

@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { ArrowLeftIcon, CopyIcon } from 'lucide-react';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useMemo, useState } from 'react';
 
 import { ExternalImage } from '@/components/ui/cloudinary-image';

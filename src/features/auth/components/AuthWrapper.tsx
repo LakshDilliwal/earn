@@ -1,4 +1,4 @@
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import dynamic from 'next/dynamic';
 import { type ReactNode, useEffect, useState } from 'react';
 

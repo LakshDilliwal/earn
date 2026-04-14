@@ -1,4 +1,4 @@
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import { createHash } from 'crypto';
 import type { GetServerSideProps } from 'next';
 import Head from 'next/head';

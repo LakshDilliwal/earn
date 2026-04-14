@@ -1,9 +1,9 @@
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import { useQuery } from '@tanstack/react-query';
 import dayjs from 'dayjs';
 import { ArrowRight, Gift, Loader2, Lock, Pencil, X } from 'lucide-react';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 

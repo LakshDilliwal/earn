@@ -1,7 +1,7 @@
 import { Cross2Icon } from '@radix-ui/react-icons';
 import { motion } from 'motion/react';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useEffect } from 'react';
 
 import { Button } from '@/components/ui/button';

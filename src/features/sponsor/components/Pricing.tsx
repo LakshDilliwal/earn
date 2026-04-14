@@ -1,6 +1,6 @@
-import { usePrivy } from '@privy-io/react-auth';
+import { usePrivy } from '@/lib/privy-react';
 import Link from 'next/link';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 
 import { Button } from '@/components/ui/button';
 import { useUser } from '@/store/user';

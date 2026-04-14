@@ -1,5 +1,5 @@
 import { X } from 'lucide-react';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';

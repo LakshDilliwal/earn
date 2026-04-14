@@ -1,6 +1,6 @@
 import { useAtom } from 'jotai';
 import { ExternalLink, Info, Loader2 } from 'lucide-react';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import { useMemo, useState } from 'react';
 import { useWatch } from 'react-hook-form';
 

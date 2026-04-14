@@ -2,7 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import {
   useSignAndSendTransaction,
   useWallets,
-} from '@privy-io/react-auth/solana';
+} from '@/lib/privy-react-solana';
 import {
   findAssociatedTokenPda,
   TOKEN_PROGRAM_ADDRESS,
@@ -12,8 +12,8 @@ import { address, type Signature } from '@solana/kit';
 import { useQueryClient } from '@tanstack/react-query';
 import { isAxiosError } from 'axios';
 import bs58 from 'bs58';
-import { log } from 'next-axiom';
-import posthog from 'posthog-js';
+import { log } from '@/lib/axiom';
+import posthog from '@/lib/posthog';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';

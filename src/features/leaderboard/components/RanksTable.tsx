@@ -1,7 +1,7 @@
 import 'flag-icons/css/flag-icons.min.css';
 
 import Link from 'next/link';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 
 import { UserFlag } from '@/components/shared/UserFlag';
 import {

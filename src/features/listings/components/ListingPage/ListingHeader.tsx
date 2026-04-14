@@ -1,7 +1,7 @@
 import { Check, Clock, File, MessageSquare, Pause } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import posthog from 'posthog-js';
+import posthog from '@/lib/posthog';
 import React from 'react';
 
 import { VerifiedBadge } from '@/components/shared/VerifiedBadge';
