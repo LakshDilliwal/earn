@@ -492,17 +492,17 @@ export default function SponsorListings({ tab: queryTab }: { tab: string }) {
             src={'/bg/talent-empty.svg'}
           />
           <p className="mx-auto mt-5 text-center text-lg font-semibold text-slate-600">
-            Create your first listing
+            No listings yet.
           </p>
           <p className="mx-auto text-center font-medium text-slate-400">
-            and start getting contributions
+            Create your first bounty, grant, or job listing. It will go live immediately after publishing.
           </p>
           <Button
             className="text-md mx-auto mt-6 mb-48 flex w-[200px]"
             onClick={onOpenCreateListing}
           >
             <Plus className="mr-2 h-3 w-3" />
-            Create New Listing
+            Create Listing
           </Button>
         </>
       )}

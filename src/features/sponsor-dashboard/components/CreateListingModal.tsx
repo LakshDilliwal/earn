@@ -56,7 +56,7 @@ export const CreateListingModal = ({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
         hideCloseIcon
-        className="overflow-hidden rounded-lg bg-white p-0 sm:max-w-160"
+        className="overflow-hidden rounded-lg border border-[#D9D1C5] bg-[#FBF7F0] p-0 sm:max-w-160"
       >
         <button className="sr-only" />
         <ScrollArea
@@ -81,7 +81,7 @@ export const CreateListingModal = ({
             <div className="space-y-4 p-4">
               <div className="flex items-center justify-between">
                 <h2 className="text-lg font-medium">
-                  Select the type of listing
+                  Create Listing
                 </h2>
                 <DialogClose asChild>
                   <Button variant="ghost" size="icon">
@@ -91,7 +91,7 @@ export const CreateListingModal = ({
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <Button
-                  className="flex h-55 flex-col gap-4 whitespace-normal text-slate-500 hover:text-slate-500"
+                  className="flex h-55 flex-col gap-4 whitespace-normal border-[#D9D1C5] bg-[#FBF7F0] text-[#111111] hover:bg-[#F6F1E8] hover:text-[#111111]"
                   variant="outline"
                   onClick={handleCreateBounty}
                 >
@@ -113,7 +113,7 @@ export const CreateListingModal = ({
                   </span>
                 </Button>
                 <Button
-                  className="flex h-55 flex-col gap-4 whitespace-normal text-slate-500 hover:text-slate-500"
+                  className="flex h-55 flex-col gap-4 whitespace-normal border-[#D9D1C5] bg-[#FBF7F0] text-[#111111] hover:bg-[#F6F1E8] hover:text-[#111111]"
                   variant="outline"
                   onClick={handleCreateProject}
                 >
@@ -137,7 +137,7 @@ export const CreateListingModal = ({
                 {visibleHackathons.map((hackathon) => (
                   <Button
                     key={hackathon.id}
-                    className="col-span-2 flex h-55 flex-col gap-4 whitespace-normal text-slate-500 hover:text-slate-500"
+                    className="col-span-2 flex h-55 flex-col gap-4 whitespace-normal border-[#D9D1C5] bg-[#FBF7F0] text-[#111111] hover:bg-[#F6F1E8] hover:text-[#111111]"
                     variant="outline"
                     onClick={() => {
                       handleCreateHackathon(hackathon.slug);

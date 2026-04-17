@@ -266,7 +266,7 @@ export function SponsorLayout({
   return (
     <SolanaWalletProvider>
       <Default
-        className="bg-white"
+        className="bg-[#F6F1E8]"
         meta={
           <Meta
             title="A36 Earn | Work to Earn in Crypto"
@@ -300,7 +300,7 @@ export function SponsorLayout({
         <div className="hidden min-h-[max(100vh,1000px)] justify-start transition-all duration-300 ease-in-out hover:shadow-lg md:flex">
           <div
             className={cn(
-              'sponsor-dashboard-sidebar overflow-x-hidden border-r border-slate-200 bg-white pt-5 whitespace-nowrap',
+              'sponsor-dashboard-sidebar overflow-x-hidden border-r border-white/10 bg-[#18261F] pt-5 whitespace-nowrap',
               'transition-all duration-300 ease-in-out',
               'transition-shadow hover:shadow-lg',
               isCollapsible ? 'fixed' : 'static',
@@ -350,7 +350,7 @@ export function SponsorLayout({
                     <DropdownMenuTrigger asChild>
                       <Button
                         className={cn(
-                          'ph-no-capture w-full gap-2 py-5.5 text-base',
+                          'ph-no-capture w-full gap-2 bg-[#22362B] py-5.5 text-base text-white hover:bg-[#1A2920]',
                           'disabled:cursor-not-allowed disabled:opacity-50',
                         )}
                         disabled={
@@ -457,7 +457,7 @@ export function SponsorLayout({
           {(showContent || isLoading) && (
             <div
               className={cn(
-                'w-full flex-1 overflow-x-auto bg-white py-5 pr-8 pl-4 transition-[margin-left] duration-300 ease-in-out',
+                'w-full flex-1 overflow-x-auto bg-[#F6F1E8] py-5 pr-8 pl-4 transition-[margin-left] duration-300 ease-in-out',
                 isCollapsible ? 'ml-20' : 'ml-0',
               )}
             >
