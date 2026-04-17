@@ -63,7 +63,7 @@ export const SignIn = ({
   const handleGmailSignIn = async () => {
     posthog.capture('google_auth');
     setIsLoading(true);
-    await initOAuth({ provider: 'google' });
+    await initOAuth();
   };
 
   return (

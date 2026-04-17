@@ -25,7 +25,6 @@ interface Props {
 export const Login = ({
   isOpen,
   onClose,
-  isSponsor = false,
   redirectTo,
   hideOverlay,
 }: Props) => {

@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import { randomUUID } from 'node:crypto';
 import { PrismaMariaDb } from '@prisma/adapter-mariadb';
-import { PrismaClient } from '../src/generated/prisma/client.ts';
+import { PrismaClient } from '../src/generated/prisma/client';
 
 const THIRTY_DAYS_MS = 30 * 24 * 60 * 60 * 1000;
 
