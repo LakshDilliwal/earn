@@ -80,16 +80,16 @@ export const SignIn = ({
             {loginStep === 0 && (
               <div className="flex flex-col items-center justify-center gap-2 text-center text-slate-500">
                 <Button
-                  className="ph-no-capture h-12 w-full font-medium"
+                  className="ph-no-capture h-12 w-full bg-[#22362B] font-semibold text-white hover:bg-[#1A2920]"
                   size="lg"
                   onClick={handleGmailSignIn}
                   disabled={isLoading}
                 >
                   <GoogleIcon />
                   {isLoading ? (
-                    <span>Connecting...</span>
+                    <span>Logging in...</span>
                   ) : (
-                    <span>Continue with Google</span>
+                    <span>Log In with Google</span>
                   )}
                 </Button>
 
@@ -102,11 +102,11 @@ export const SignIn = ({
                 <Button
                   variant="outline"
                   size="lg"
-                  className="h-12 w-full bg-white font-medium text-slate-500 hover:bg-slate-100 active:bg-slate-200"
+                  className="h-12 w-full border-[#D9D1C5] bg-[#FBF7F0] font-medium text-[#111111] hover:bg-[#F6F1E8] active:bg-[#F6F1E8]"
                   onClick={() => setLoginStep(1)}
                 >
                   <MdOutlineEmail className="mr-2" />
-                  <span>Continue with Email</span>
+                  <span>Log In with Email</span>
                 </Button>
               </div>
             )}

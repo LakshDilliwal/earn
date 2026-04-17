@@ -17,7 +17,7 @@ export default function SigninPage() {
       }, 0);
     }
 
-    toast.error('There was an error. You need to sign in again.');
+    toast.error('Session expired. Log back in to continue.');
   }, []);
 
   return <Login isOpen={true} onClose={() => {}} redirectTo={redirectPath} />;

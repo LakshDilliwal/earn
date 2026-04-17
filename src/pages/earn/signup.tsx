@@ -1,5 +1,6 @@
 import { usePrivy } from '@/lib/privy-react';
 import { useMutation, useQuery } from '@tanstack/react-query';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { toast } from 'sonner';
@@ -57,7 +58,7 @@ export default function SignupPage() {
 
   if (error) {
     return (
-      <div className="container flex justify-center">
+      <div className="container flex justify-center bg-[#F6F1E8]">
         <div className="mt-10 flex flex-col items-center gap-4">
           <h1 className="text-2xl font-bold">Invitation Error</h1>
           <p>{error instanceof Error ? error.message : 'An error occurred'}</p>
@@ -71,14 +72,14 @@ export default function SignupPage() {
 
   if (!ready || isPending) {
     return (
-      <div className="container mx-auto flex max-w-xl justify-center">
-        <div className="mt-10 w-full rounded-lg border border-gray-200 bg-white px-20 pt-20 pb-40 shadow-lg">
+      <div className="container mx-auto flex max-w-xl justify-center bg-[#F6F1E8]">
+        <div className="mt-10 w-full rounded-lg border border-[#D9D1C5] bg-[#FBF7F0] px-20 pt-20 pb-40 shadow-lg">
           <div className="flex flex-col items-center">
-            <p className="text-center text-2xl font-semibold text-slate-600">
-              Welcome to A36 Earn
+            <p className="text-center text-2xl font-semibold text-[#18261F]">
+              Join A36 Earn.
             </p>
-            <p className="text-center text-lg text-slate-400">
-              Start your journey to access top global talent!
+            <p className="text-center text-lg text-[#5E5A54]">
+              Access bounties, grants, and jobs from serious ecosystems.
             </p>
             <div className="mt-8 text-center text-slate-500">Loading...</div>
           </div>
@@ -88,14 +89,36 @@ export default function SignupPage() {
   }
 
   return (
-    <div className="container mx-auto flex max-w-xl justify-center">
-      <div className="mt-10 w-full rounded-lg border border-gray-200 bg-white px-20 pt-20 pb-40 shadow-lg">
+    <div className="container mx-auto flex max-w-xl justify-center bg-[#F6F1E8]">
+      <div className="mt-10 w-full rounded-lg border border-[#D9D1C5] bg-[#FBF7F0] px-20 pt-20 pb-40 shadow-lg">
         <div className="flex flex-col items-center">
-          <p className="text-center text-2xl font-semibold text-slate-600">
-            Welcome to A36 Earn
+          <div className="mb-3 flex justify-center">
+            <svg
+              viewBox="0 0 92 28"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="A36 Earn"
+              role="img"
+              fill="currentColor"
+              className="h-8 w-auto text-[#18261F]"
+            >
+              <text
+                x="0"
+                y="22"
+                fontFamily="Montserrat,sans-serif"
+                fontSize="22"
+                fontWeight="800"
+                letterSpacing="-0.5"
+              >
+                A36
+              </text>
+              <circle cx="86" cy="19" r="4" fill="#F9B012" />
+            </svg>
+          </div>
+          <p className="text-center text-2xl font-semibold text-[#18261F]">
+            Join A36 Earn.
           </p>
-          <p className="mb-6 text-center text-lg text-slate-400">
-            Start your journey to access top global talent!
+          <p className="mb-6 text-center text-lg text-[#5E5A54]">
+            Access bounties, grants, and jobs from serious ecosystems.
           </p>
 
           {inviteDetails?.sponsorLogo && inviteDetails?.sponsorName ? (
@@ -156,7 +179,7 @@ export default function SignupPage() {
               </div>
             ) : (
               <Button
-                className="mt-4"
+                className="mt-4 bg-[#22362B] text-white hover:bg-[#1A2920]"
                 disabled={
                   !inviteDetails ||
                   acceptInviteMutation.isPending ||
@@ -165,9 +188,14 @@ export default function SignupPage() {
                 onClick={handleAcceptInvite}
                 size="lg"
               >
-                Accept Invite
+                Create Account
               </Button>
             )}
+          </div>
+          <div className="mt-6 text-sm text-[#5E5A54]">
+            <Link href="/earn/signin" className="hover:text-[#18261F] hover:underline">
+              Already have an account? Log in →
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { useLoginWithOAuth } from '@/lib/privy-react';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useState } from 'react';
 
@@ -78,7 +79,7 @@ export const Login = ({
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogContent
-        className="z-200 w-[23rem] p-0 pt-2"
+        className="z-200 w-[23rem] rounded-lg border border-[#D9D1C5] bg-[#FBF7F0] p-0 pt-2"
         classNames={{
           overlay: hideOverlay ? 'hidden' : '',
         }}
@@ -91,13 +92,33 @@ export const Login = ({
               onClick={() => setLoginStep(0)}
             />
           )}
-          <p className="text-center text-lg font-semibold text-slate-900">
-            You&apos;re one step away
+          <div className="mb-3 flex justify-center">
+            <svg
+              viewBox="0 0 92 28"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="A36 Earn"
+              role="img"
+              fill="currentColor"
+              className="h-8 w-auto text-[#18261F]"
+            >
+              <text
+                x="0"
+                y="22"
+                fontFamily="Montserrat,sans-serif"
+                fontSize="22"
+                fontWeight="800"
+                letterSpacing="-0.5"
+              >
+                A36
+              </text>
+              <circle cx="86" cy="19" r="4" fill="#F9B012" />
+            </svg>
+          </div>
+          <p className="text-center text-lg font-semibold text-[#18261F]">
+            Welcome back.
           </p>
-          <p className="text-center text-sm text-slate-600">
-            {isSponsor
-              ? 'from joining A36 Earn'
-              : 'From earning in global standards'}
+          <p className="text-center text-sm text-[#5E5A54]">
+            Log in to your A36 Earn account.
           </p>
         </div>
         <SignIn
@@ -106,6 +127,11 @@ export const Login = ({
           setLoginStep={setLoginStep}
           onSuccess={onClose}
         />
+        <div className="pb-4 text-center text-sm text-[#5E5A54]">
+          <Link href="/earn/signup" className="hover:text-[#18261F] hover:underline">
+            New here? Create an account →
+          </Link>
+        </div>
       </DialogContent>
     </Dialog>
   );
