@@ -9,7 +9,6 @@ import IoSearchOutline from '@/components/icons/IoSearchOutline';
 import IoWalletOutline from '@/components/icons/IoWalletOutline';
 import { Button } from '@/components/ui/button';
 import { ExternalImage } from '@/components/ui/cloudinary-image';
-import { LocalImage } from '@/components/ui/local-image';
 import { Separator } from '@/components/ui/separator';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useCreditBalance } from '@/store/credit';
@@ -110,11 +109,33 @@ export const DesktopNavbar = ({
   };
 
   const isPro = user?.isPro;
+  const logo = (
+    <svg
+      viewBox="0 0 92 28"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="A36 Earn"
+      role="img"
+      fill="white"
+      className="h-7 w-auto"
+    >
+      <text
+        x="0"
+        y="22"
+        fontFamily="Montserrat,sans-serif"
+        fontSize="22"
+        fontWeight="800"
+        letterSpacing="-0.5"
+      >
+        A36
+      </text>
+      <circle cx="86" cy="19" r="4" fill="#F9B012" />
+    </svg>
+  );
 
   return (
     <div
       className={cn(
-        'hidden h-14 border-b border-slate-200 bg-white text-slate-500 lg:flex',
+        'hidden h-16 border-b border-white/10 bg-[#1F2337] text-white lg:flex',
         padding,
       )}
     >
@@ -128,17 +149,13 @@ export const DesktopNavbar = ({
         <div className="ph-no-capture flex w-fit items-center gap-3 lg:gap-5">
           <LogoContextMenu>
             <Link
-              href="/earn"
+              href="/"
               className="flex items-center gap-3 hover:no-underline"
               onClick={() => {
                 posthog.capture('homepage logo click_universal');
               }}
             >
-              <LocalImage
-                className="h-[1.4rem] cursor-pointer object-contain"
-                alt="A36 Earn"
-                src="/assets/logo.svg"
-              />
+              {logo}
 
               {isDashboardRoute && (
                 <>
@@ -149,7 +166,7 @@ export const DesktopNavbar = ({
             </Link>
           </LogoContextMenu>
 
-          <Separator orientation="vertical" className="h-6" />
+          <Separator orientation="vertical" className="h-6 bg-white/20" />
 
           {!router.pathname.startsWith('/earn/new/') && (
             <>
@@ -218,7 +235,7 @@ export const DesktopNavbar = ({
             )}
         </div>
 
-        <div className="flex items-center gap-4 py-1.5">
+          <div className="flex items-center gap-3 py-1.5">
           {((!authUiReady && !authenticated) || (isLoading && !user)) && (
             <div className="flex items-center gap-2">
               <Skeleton className="size-7 rounded-full" />
@@ -232,7 +249,7 @@ export const DesktopNavbar = ({
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="text-xs font-semibold"
+                  className="rounded-md border border-white/30 text-xs font-semibold text-white hover:bg-white hover:text-[#1F2337]"
                   onClick={() => {
                     posthog.capture('sponsor dashboard_navbar');
                   }}
@@ -329,19 +346,19 @@ export const DesktopNavbar = ({
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="text-xs font-semibold"
+                  className="text-xs font-semibold text-white hover:bg-white/10"
                   onClick={() => {
                     posthog.capture('login_navbar');
                     onLoginOpen();
                   }}
                 >
-                  Login
+                  Log In
                 </Button>
               </div>
               <Button
                 variant="default"
                 size="sm"
-                className="my-1 w-full px-4 text-xs font-semibold"
+                className="my-1 w-full rounded-md border border-[#F9B012] bg-[#22362B] px-4 text-xs font-semibold text-white hover:bg-[#1A2920]"
                 onClick={() => {
                   posthog.capture('signup_navbar');
                   onLoginOpen();
