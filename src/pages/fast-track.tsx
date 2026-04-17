@@ -31,8 +31,8 @@ export default function FastTrack() {
     <>
       <Meta
         title="Fast Track | Accelerate Your Solana Idea"
-        description="Global Superteam Members can receive perks & personalized support when applying to acceleration & incubation programs."
-        canonical="https://superteam.fun/fast-track/"
+        description="Global A36 Labs Members can receive perks & personalized support when applying to acceleration & incubation programs."
+        canonical="https://a36labs.com/fast-track/"
         og={`${ASSET_URL}/st/og/og-fast-track.png`}
       />
 
@@ -41,7 +41,7 @@ export default function FastTrack() {
           <FastTrackContainer
             line1="Fast track your idea"
             line2="out of the sandbox"
-            line3="Global Superteam Members can receive perks & personalized support"
+            line3="Global A36 Labs Members can receive perks & personalized support"
             line4=" when applying to the following acceleration & incubation programs."
           />
           <div className="hero-bg fast-track-hero-bg absolute top-0 left-0 overflow-hidden">

@@ -35,7 +35,7 @@ const OpportunitiesPage = ({ parsedTags }: OpportunitiesPageProps) => {
   const displayName = getOpportunityDisplayName(parsedTags);
   const description = getOpportunityDescription(parsedTags);
   const canonicalSlug = generateCanonicalSlug(parsedTags);
-  const canonical = `https://superteam.fun/earn/opportunities/${canonicalSlug}/`;
+  const canonical = `https://a36labs.com/earn/opportunities/${canonicalSlug}/`;
   const ogImage = `${ASSET_URL}/og/og.png`;
 
   const breadcrumbSchema = generateBreadcrumbListSchema([
@@ -55,7 +55,7 @@ const OpportunitiesPage = ({ parsedTags }: OpportunitiesPageProps) => {
       meta={
         <>
           <Meta
-            title={`${displayName} | Superteam Earn`}
+            title={`${displayName} | A36 Earn`}
             description={description}
             canonical={canonical}
             og={ogImage}
@@ -66,7 +66,7 @@ const OpportunitiesPage = ({ parsedTags }: OpportunitiesPageProps) => {
             <meta property="og:image:height" content="630" />
             <meta
               property="og:image:alt"
-              content={`${displayName} on Superteam Earn`}
+              content={`${displayName} on A36 Earn`}
             />
             <meta name="twitter:card" content="summary_large_image" />
           </Head>

@@ -60,9 +60,9 @@ const RegionsPage = ({ slug, st, countryData }: RegionsPageProps) => {
         meta={
           <>
             <Meta
-              title={`Welcome to Superteam Earn ${displayName} | Discover Bounties and Grants`}
-              description={`Welcome to Superteam Earn ${displayName}'s page — Discover bounties and grants and become a part of the global crypto community`}
-              canonical={`https://superteam.fun/earn/regions/${slug}/`}
+              title={`Welcome to A36 Earn ${displayName} | Discover Bounties and Grants`}
+              description={`Welcome to A36 Earn ${displayName}'s page — Discover bounties and grants and become a part of the global crypto community`}
+              canonical={`https://a36labs.com/earn/regions/${slug}/`}
               og={ogImage.toString()}
             />
             <JsonLd data={[organizationSchema, breadcrumbSchema]} />
@@ -106,9 +106,9 @@ const RegionsPage = ({ slug, st, countryData }: RegionsPageProps) => {
         meta={
           <>
             <Meta
-              title={`Welcome to Superteam Earn ${countryName} | Discover Bounties and Grants`}
-              description={`Welcome to Superteam Earn ${countryName}'s page — Discover bounties and grants and become a part of the global crypto community`}
-              canonical={`https://superteam.fun/earn/regions/${slug}/`}
+              title={`Welcome to A36 Earn ${countryName} | Discover Bounties and Grants`}
+              description={`Welcome to A36 Earn ${countryName}'s page — Discover bounties and grants and become a part of the global crypto community`}
+              canonical={`https://a36labs.com/earn/regions/${slug}/`}
               og={ogImage.toString()}
             />
             <JsonLd data={[organizationSchema, breadcrumbSchema]} />

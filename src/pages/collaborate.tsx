@@ -34,9 +34,9 @@ export default function Collaborate() {
   return (
     <>
       <Meta
-        title="Work with Superteam | Access the Best Talent on Solana"
-        description="Get access to the best talent on Solana. Superteam is the forefront community for web3, powered by Solana."
-        canonical="https://superteam.fun/collaborate/"
+        title="Work with A36 Labs | Access the Best Talent on Solana"
+        description="Get access to the best talent on Solana. A36 Labs is the forefront community for web3, powered by Solana."
+        canonical="https://a36labs.com/collaborate/"
         og={`${ASSET_URL}/st/og/og-collaborate.png`}
       />
 

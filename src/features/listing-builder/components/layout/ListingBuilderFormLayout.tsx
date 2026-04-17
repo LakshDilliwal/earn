@@ -24,8 +24,8 @@ export function ListingBuilderFormLayout({
       {...props}
     >
       <Meta
-        title="Create a Listing | Superteam Earn"
-        description="Create a listing on Superteam Earn and gain access to thousands of high quality talent"
+        title="Create a Listing | A36 Earn"
+        description="Create a listing on A36 Earn and gain access to thousands of high quality talent"
       />
       <Header />
       <div className="flex flex-1 flex-col">{children}</div>

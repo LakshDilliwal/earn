@@ -73,7 +73,7 @@ const ProEligibility = ({ totalWinnings }: { totalWinnings: number }) => {
         />
         <div className="flex flex-col">
           <p className="text-sm text-slate-500">
-            Become a Superteam member of your region
+            Become a A36 Labs member of your region
           </p>
         </div>
       </div>

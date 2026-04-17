@@ -10,7 +10,7 @@ export default function Custom404() {
       meta={
         <>
           <Meta
-            title="Not Found | Superteam Earn"
+            title="Not Found | A36 Earn"
             description="404 - Page Not Found"
           />
           <Head>

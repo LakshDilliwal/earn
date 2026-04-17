@@ -14,7 +14,7 @@ const initialFaqs: FaqItem[] = [
   {
     question: 'Who is eligible to apply?',
     answer:
-      'This program is exclusive for Superteam Members. All Global Superteam Members are eligible to apply.',
+      'This program is exclusive for A36 Labs Members. All Global A36 Labs Members are eligible to apply.',
     open: false,
   },
   {
@@ -31,7 +31,7 @@ const initialFaqs: FaqItem[] = [
   {
     question: 'Does fast track mean I get a guaranteed spot in the program?',
     answer:
-      'This program is an attempt to grant exclusive perks to Superteam Members and does not guarantee that the applications will get accepted.',
+      'This program is an attempt to grant exclusive perks to A36 Labs Members and does not guarantee that the applications will get accepted.',
     open: false,
   },
 ];

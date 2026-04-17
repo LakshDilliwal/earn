@@ -22,8 +22,8 @@ export default function Blocked() {
       meta={
         <>
           <Meta
-            title="Blocked | Superteam Earn"
-            description="Explore the latest bounties on Superteam Earn, offering opportunities in the crypto space across Design, Development, and Content."
+            title="Blocked | A36 Earn"
+            description="Explore the latest bounties on A36 Earn, offering opportunities in the crypto space across Design, Development, and Content."
           />
           <Head>
             <meta name="robots" content="noindex, nofollow" />
@@ -36,9 +36,9 @@ export default function Blocked() {
           Your access to Earn has been restricted. Please get in touch with{' '}
           <Link
             className="text-brand-purple"
-            href="mailto:support@superteam.fun"
+            href="mailto:support@a36labs.com"
           >
-            support@superteam.fun
+            support@a36labs.com
           </Link>{' '}
           if you have any questions for more information.
         </p>

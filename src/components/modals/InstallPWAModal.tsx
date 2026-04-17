@@ -124,7 +124,7 @@ export const InstallPWAModal = () => {
               <div className="mt-4 flex flex-col items-center">
                 <LocalImage
                   src="/android-chrome-512x512.png"
-                  alt="Superteam Earn Icon"
+                  alt="A36 Earn Icon"
                   className="h-16 w-16"
                 />
 

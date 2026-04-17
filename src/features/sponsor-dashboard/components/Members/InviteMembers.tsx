@@ -78,7 +78,7 @@ export function InviteMembers({ isOpen, onClose }: Props) {
               </div>
               <AlertDescription>
                 Your team member will receive an email with a link to join
-                Superteam Earn.
+                A36 Earn.
               </AlertDescription>
             </Alert>
 

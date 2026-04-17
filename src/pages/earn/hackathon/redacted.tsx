@@ -74,9 +74,9 @@ export default function Redacted({ hackathon }: { hackathon: Hackathon }) {
             content={`https://res.cloudinary.com/dgvnuwspr/image/upload/v1741616337/assets/hackathon/redacted/redacted-og`}
           />
           <Meta
-            title="Helius [REDACTED] Hackathon | Superteam Earn"
+            title="Helius [REDACTED] Hackathon | A36 Earn"
             description="Join the Helius Hackathon—a data-driven challenge empowering analysts, data scientists, and on-chain sleuths to expose fraud, build insightful dashboards, and advance Solana’s social layer."
-            canonical="https://superteam.fun/earn/hackathon/redacted/"
+            canonical="https://a36labs.com/earn/hackathon/redacted/"
             og="https://res.cloudinary.com/dgvnuwspr/image/upload/v1741616337/assets/hackathon/redacted/redacted-og"
           />
         </>
@@ -217,7 +217,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: 'How are winners paid?',
     answer:
-      'Winners are paid directly by the bounty sponsor. Sponsors have two weeks after the judgment period to remit payments to winners. Winners can receive payments through the wallet connected to their Superteam account, or through an external wallet.',
+      'Winners are paid directly by the bounty sponsor. Sponsors have two weeks after the judgment period to remit payments to winners. Winners can receive payments through the wallet connected to their A36 Labs account, or through an external wallet.',
   },
   {
     question: 'I have questions. Who should I contact?',

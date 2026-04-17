@@ -68,7 +68,7 @@ export function HowItWorks() {
             <div className="order-1 md:order-2">
               <Copy
                 title="Pay Winners Without Commissions Or Fees"
-                description="All the prize money goes directly to the talent. Superteam Earn takes zero commission on work done through the platform."
+                description="All the prize money goes directly to the talent. A36 Earn takes zero commission on work done through the platform."
               />
             </div>
             <div className="order-2 flex items-center justify-center rounded-2xl bg-emerald-50 md:order-1 md:p-6 md:py-10">

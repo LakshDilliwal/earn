@@ -115,10 +115,10 @@ export function ListingPageLayout({
         <Head>
           <title>{`${
             initialListing?.title || 'Apply'
-          } by ${initialListing?.sponsor?.name} | Superteam Earn Listing`}</title>
+          } by ${initialListing?.sponsor?.name} | A36 Earn Listing`}</title>
           <meta
             name="description"
-            content={`${getListingTypeLabel(initialListing?.type ?? 'Listing')} on Superteam Earn | ${
+            content={`${getListingTypeLabel(initialListing?.type ?? 'Listing')} on A36 Earn | ${
               initialListing?.sponsor?.name
             } is seeking freelancers and builders ${
               initialListing?.title
@@ -130,12 +130,12 @@ export function ListingPageLayout({
           {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
           <meta
             property="og:title"
-            content={`${initialListing?.title || 'Listing'} | Superteam Earn`}
+            content={`${initialListing?.title || 'Listing'} | A36 Earn`}
           />
           <meta property="og:image" content={ogImage.toString()} />
           <meta
             name="twitter:title"
-            content={`${initialListing?.title || 'Listing'} | Superteam Earn`}
+            content={`${initialListing?.title || 'Listing'} | A36 Earn`}
           />
           <meta name="twitter:image" content={ogImage.toString()} />
           <meta name="twitter:card" content="summary_large_image" />
@@ -143,7 +143,7 @@ export function ListingPageLayout({
           <meta property="og:image:height" content="630" />
           <meta
             property="og:image:alt"
-            content={`${initialListing?.title || 'Listing'} - ${initialListing?.type === 'bounty' ? 'Bounty' : 'Project'} by ${initialListing?.sponsor?.name || 'Sponsor'} on Superteam Earn`}
+            content={`${initialListing?.title || 'Listing'} - ${initialListing?.type === 'bounty' ? 'Bounty' : 'Project'} by ${initialListing?.sponsor?.name || 'Sponsor'} on A36 Earn`}
           />
           <meta property="og:type" content="website" />
           <meta charSet="UTF-8" key="charset" />

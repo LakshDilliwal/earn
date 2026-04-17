@@ -85,15 +85,15 @@ const SearchPage = ({ initialQuery = '' }: SearchProps) => {
           <Meta
             title={
               searchTerm
-                ? `Search: ${searchTerm} | Superteam Earn`
-                : 'Search | Superteam Earn'
+                ? `Search: ${searchTerm} | A36 Earn`
+                : 'Search | A36 Earn'
             }
             description={
               searchTerm
-                ? `Search results for "${searchTerm}" on Superteam Earn`
-                : 'Search for bounties, grants, and opportunities on Superteam Earn'
+                ? `Search results for "${searchTerm}" on A36 Earn`
+                : 'Search for bounties, grants, and opportunities on A36 Earn'
             }
-            canonical="https://superteam.fun/earn/search/"
+            canonical="https://a36labs.com/earn/search/"
             og={ASSET_URL + `/og/og.png`}
           />
           <JsonLd data={[generateWebSiteSchema()]} />

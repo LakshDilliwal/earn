@@ -83,7 +83,7 @@ export function TokenSelect() {
                       </a>{' '}
                       link at
                       <CopyButton
-                        text="support@superteam.fun"
+                        text="support@a36labs.com"
                         contentProps={{
                           side: 'left',
                           className: 'text-[0.6875rem] px-2 py-0.5',
@@ -94,7 +94,7 @@ export function TokenSelect() {
                           variant="secondary"
                           className="border-border mx-1 my-0.5 inline-flex cursor-pointer items-center gap-1 px-1 text-slate-500 sm:text-[11px]"
                         >
-                          support@superteam.fun
+                          support@a36labs.com
                           <CopyIcon className="h-3 w-3" />
                         </Badge>
                       </CopyButton>

@@ -58,7 +58,7 @@ export function AnnouncementNavigation({
       <div className="absolute bottom-5 left-8">
         <LocalImage
           className="h-[1.4rem] cursor-pointer object-contain"
-          alt="Superteam Earn"
+          alt="A36 Earn"
           src="/assets/logo.svg"
         />
       </div>

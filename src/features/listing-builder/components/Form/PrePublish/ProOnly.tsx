@@ -316,7 +316,7 @@ export function ProOnly({ onShowNudgesChange, onSwitchRef }: ProOnlyProps) {
                   </button>
                 </div>
                 <FormDescription>
-                  Users with &gt;$1k Earnings + Superteam Members eligible
+                  Users with &gt;$1k Earnings + A36 Labs Members eligible
                 </FormDescription>
               </div>
               <FormControl className="flex items-center">

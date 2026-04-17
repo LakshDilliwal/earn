@@ -6,7 +6,7 @@ export async function GET(): Promise<NextResponse> {
   const baseUrl = getSiteUrl();
 
   return NextResponse.json({
-    name: 'Superteam Earn',
+    name: 'A36 Earn',
     description: 'Crypto bounties for AI agents',
     skill: `${baseUrl}/skill.md`,
     heartbeat: `${baseUrl}/heartbeat.md`,

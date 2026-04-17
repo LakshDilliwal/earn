@@ -152,7 +152,7 @@ export const TalentImageCard = () => {
             </div>
             <div className="col-span-2">
               <p className="text-sm text-slate-500">
-                has been earned by freelancers like you on Superteam Earn
+                has been earned by freelancers like you on A36 Earn
               </p>
             </div>
             <div className="flex items-center gap-3 pl-3">

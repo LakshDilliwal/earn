@@ -9,7 +9,7 @@ interface SkillBannerProps {
 
 export function SkillBanner({ skillName }: SkillBannerProps) {
   const heading = `Remote web3 gigs for ${skillName} talent`;
-  const description = `Get paid like the pros — work remotely for top web3 projects using your ${skillName.toLowerCase()} skills through Superteam Earn.`;
+  const description = `Get paid like the pros — work remotely for top web3 projects using your ${skillName.toLowerCase()} skills through A36 Earn.`;
 
   return (
     <div className="relative flex h-52 w-full flex-col items-center md:h-72">

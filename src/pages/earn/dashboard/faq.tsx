@@ -21,15 +21,15 @@ const faqSections: readonly FAQSection[] = [
     title: 'Getting Started',
     subsections: [
       {
-        question: 'What can I use Superteam Earn for?',
-        answer: `Superteam Earn is a platform to get work done from crypto-native talent. This can be in the form of bounties (get the same work done by many people) or hiring freelancers in the form of Project listings. Earn can be used to get any small to medium-scale task done, including but not limited to development, writing, design, research, and product feedback.
+        question: 'What can I use A36 Earn for?',
+        answer: `A36 Earn is a platform to get work done from crypto-native talent. This can be in the form of bounties (get the same work done by many people) or hiring freelancers in the form of Project listings. Earn can be used to get any small to medium-scale task done, including but not limited to development, writing, design, research, and product feedback.
 <br />
 <br />
 <a style="color: blue" href="https://docs.google.com/spreadsheets/d/18Pahc-_9WhXezz7DW2kjwE1Iu-ExbOFtoxlPPsavsvg/edit?gid=0#gid=0" target="_blank">Click here</a> to access the Listings Menu, which contains ideas, listing examples, suggested prize ranges, etc.`,
       },
       {
         question: 'Are there any hidden charges to publish a listing?',
-        answer: `No! Superteam Earn is completely free to use. There are no listing or platform fees.`,
+        answer: `No! A36 Earn is completely free to use. There are no listing or platform fees.`,
       },
       {
         question: 'How much money do I need to put up?',
@@ -37,14 +37,14 @@ const faqSections: readonly FAQSection[] = [
       },
       {
         question: 'What kind of distribution do sponsors get from Earn?',
-        answer: `When you publish a listing on Superteam Earn, it can be distributed across multiple high-visibility channels, including:
+        answer: `When you publish a listing on A36 Earn, it can be distributed across multiple high-visibility channels, including:
 <br />
 <br />
 <strong>1. Homepage:</strong> Your listing will be featured on the Earn homepage, which receives <strong>50,000 monthly active users</strong> actively browsing for work opportunities.
 <br />
-<strong>2. Discord Bot:</strong> Listings are shared in real-time in relevant Superteam Discord channels across Superteam discords.
+<strong>2. Discord Bot:</strong> Listings are shared in real-time in relevant A36 Labs Discord channels across A36 Labs discords.
 <br />
-<strong>3. X:</strong> Listings with <strong>rewards over $1,000</strong> are amplified to reach a global audience via Superteam Earn's <a style="color: blue" href="http://x.com/superteamearn" target="_blank">X</a> profile.
+<strong>3. X:</strong> Listings with <strong>rewards over $1,000</strong> are amplified to reach a global audience via A36 Earn's <a style="color: blue" href="http://x.com/superteamearn" target="_blank">X</a> profile.
 <br />
 <strong>4. Email Blasts:</strong> Listings may be included in curated newsletters depending on factors like reward size, sponsor reputation, and past engagement reaching, Earn's users' inbox directly.`,
       },
@@ -79,7 +79,7 @@ const faqSections: readonly FAQSection[] = [
 After publishing your listing, you'll be prompted to fill out a short verification form. This helps us maintain trust on the platform and keep bad actors out. Once verified, your listing will automatically go live.
 <br />
 <br />
-<strong>Pro tip:</strong> For faster verification, get referred by a <strong>Superteam Lead</strong> and mention their name in the <strong>"Reference"</strong> field of the form.
+<strong>Pro tip:</strong> For faster verification, get referred by a <strong>A36 Labs Lead</strong> and mention their name in the <strong>"Reference"</strong> field of the form.
 <br />
 <em>Note: We aim to complete all verifications within 24 hours.</em>`,
       },
@@ -188,11 +188,11 @@ To verify the transaction, the wallet address must match the winner's, and the t
     subsections: [
       {
         question: "I can't connect my wallet. What should I do?",
-        answer: `Ensure your wallet is supported and unlocked. Try refreshing the page or reconnecting. If the issue persists, contact <a style="color: blue" href="mailto:support@superteam.fun" target="_blank">support@superteam.fun</a>`,
+        answer: `Ensure your wallet is supported and unlocked. Try refreshing the page or reconnecting. If the issue persists, contact <a style="color: blue" href="mailto:support@a36labs.com" target="_blank">support@a36labs.com</a>`,
       },
       {
         question: 'I need help with my listing. How can I get in touch?',
-        answer: `Email us at <a style="color: blue" href="mailto:support@superteam.fun" target="_blank">support@superteam.fun</a> and we'll get back to you ASAP.`,
+        answer: `Email us at <a style="color: blue" href="mailto:support@a36labs.com" target="_blank">support@a36labs.com</a> and we'll get back to you ASAP.`,
       },
     ],
   },

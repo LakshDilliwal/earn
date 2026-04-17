@@ -62,9 +62,9 @@ export default function AllRegionsPage({
         meta={
           <>
             <Meta
-              title={`Welcome to Superteam Earn ${displayName} | Discover Bounties and Grants`}
-              description={`Welcome to Superteam ${displayName}'s page — Discover bounties and grants and become a part of the global crypto community`}
-              canonical={`https://superteam.fun/earn/regions/${slug}/all/`}
+              title={`Welcome to A36 Earn ${displayName} | Discover Bounties and Grants`}
+              description={`Welcome to A36 Labs ${displayName}'s page — Discover bounties and grants and become a part of the global crypto community`}
+              canonical={`https://a36labs.com/earn/regions/${slug}/all/`}
               og={ogImage.toString()}
             />
             <JsonLd data={[organizationSchema, breadcrumbSchema]} />
@@ -105,9 +105,9 @@ export default function AllRegionsPage({
         meta={
           <>
             <Meta
-              title={`Welcome to Superteam Earn ${countryName} | Discover Bounties and Grants`}
-              description={`Welcome to Superteam ${countryName}'s page — Discover bounties and grants and become a part of the global crypto community`}
-              canonical={`https://superteam.fun/earn/regions/${slug}/all/`}
+              title={`Welcome to A36 Earn ${countryName} | Discover Bounties and Grants`}
+              description={`Welcome to A36 Labs ${countryName}'s page — Discover bounties and grants and become a part of the global crypto community`}
+              canonical={`https://a36labs.com/earn/regions/${slug}/all/`}
               og={ogImage.toString()}
             />
             <JsonLd data={[organizationSchema, breadcrumbSchema]} />

@@ -46,9 +46,9 @@ export default function Home({ chapters, chaptersForSchema }: HomePageProps) {
   return (
     <>
       <Meta
-        title="Superteam | The Talent Layer of Solana"
-        description="Superteam is a community of the best talent learning, earning and building in crypto."
-        canonical="https://superteam.fun/"
+        title="A36 Earn | Bounties, Grants & Jobs"
+        description="A36 Earn — curated bounties, grants, and jobs from a global builder ecosystem across Web3, AI, and frontier tech. Not for everyone. For the right ones."
+        canonical="https://a36labs.com/"
         og={`${ASSET_URL}/st/og/og-home.png`}
       />
       <JsonLd data={generateSuperteamChaptersSchema(chaptersForSchema)} />
@@ -64,10 +64,10 @@ export default function Home({ chapters, chaptersForSchema }: HomePageProps) {
       </Head>
 
       <Hero
-        line1="Join The Talent Layer"
-        line2="of Solana"
-        line3="superteam is a community of the best talent learning,"
-        line4="earning and building in crypto"
+        line1="Earn From the Best Opportunities"
+        line2=""
+        line3="A global builder ecosystem connecting serious builders"
+        line4="to protocols, capital, and real work."
         buttonVisible={false}
       />
 

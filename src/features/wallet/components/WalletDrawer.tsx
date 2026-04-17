@@ -257,18 +257,18 @@ export function WalletDrawer({
             <p className="sticky bottom-0 mt-auto bg-white px-2 py-2 text-center text-xs text-slate-400 sm:text-sm">
               Have questions? Reach out to us at{' '}
               {isMD ? (
-                <CopyButton text="support@superteam.fun">
+                <CopyButton text="support@a36labs.com">
                   <p className="underline hover:text-slate-500">
-                    support@superteam.fun
+                    support@a36labs.com
                   </p>
                 </CopyButton>
               ) : (
                 <a
-                  href="mailto:support@superteam.fun"
+                  href="mailto:support@a36labs.com"
                   className="underline hover:text-slate-500"
                   target="_blank"
                 >
-                  support@superteam.fun
+                  support@a36labs.com
                 </a>
               )}
             </p>

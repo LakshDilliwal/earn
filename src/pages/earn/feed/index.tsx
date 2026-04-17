@@ -19,9 +19,9 @@ export default function FeedPage({ id, type }: Props) {
       type={type || undefined}
       meta={
         <Meta
-          title="Activity Feed | Superteam Earn"
-          description="Discover the best work on Earn. Browse popular submissions, recent activity, and winning entries from the Superteam community."
-          canonical="https://superteam.fun/earn/feed/"
+          title="Activity Feed | A36 Earn"
+          description="Discover the best work on Earn. Browse popular submissions, recent activity, and winning entries from the A36 Labs community."
+          canonical="https://a36labs.com/earn/feed/"
           og={ASSET_URL + `/og/og.png`}
         />
       }

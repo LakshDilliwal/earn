@@ -137,9 +137,9 @@ export default function AgentListingsPage({
       className={cn('bg-white')}
       meta={
         <Meta
-          title="Agent Listings | Superteam Earn"
-          description="Browse agent-eligible listings on Superteam Earn, including AGENT_ALLOWED and AGENT_ONLY opportunities."
-          canonical="https://superteam.fun/earn/agents/listings/"
+          title="Agent Listings | A36 Earn"
+          description="Browse agent-eligible listings on A36 Earn, including AGENT_ALLOWED and AGENT_ONLY opportunities."
+          canonical="https://a36labs.com/earn/agents/listings/"
           og={ASSET_URL + `/og/og.png`}
         />
       }

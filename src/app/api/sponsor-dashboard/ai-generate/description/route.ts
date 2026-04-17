@@ -76,7 +76,7 @@ export async function POST(req: NextRequest) {
       messages: convertToModelMessages(messages),
       headers: {
         'HTTP-Referer': process.env.NEXT_PUBLIC_SITE_URL,
-        'X-Title': 'Superteam Earn - AI Listing Builder',
+        'X-Title': 'A36 Earn - AI Listing Builder',
       },
     });
 

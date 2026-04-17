@@ -61,7 +61,7 @@ export const Footer = () => {
   const resources: FooterLink[] = [
     {
       text: 'Changelog',
-      href: 'https://superteamdao.notion.site/Superteam-Earn-Changelog-faf0c85972a742699ecc07a52b569827',
+      href: 'https://superteamdao.notion.site/A36 Labs-Earn-Changelog-faf0c85972a742699ecc07a52b569827',
     },
     {
       text: 'Rate Card',
@@ -159,13 +159,13 @@ export const Footer = () => {
               </p>
             </div>
             <p className="mb-5 max-w-sm text-lg text-slate-300">
-              Superteam Earn is the largest talent marketplace on Solana.
+              A36 Earn is the largest talent marketplace on Solana.
             </p>
             <div className="flex items-center gap-4">
               <button
                 className="text-slate-100 transition-opacity hover:text-white"
                 onClick={() => {
-                  window.open('mailto:support@superteam.fun', '_blank');
+                  window.open('mailto:support@a36labs.com', '_blank');
                 }}
                 aria-label="Email"
               >
@@ -195,7 +195,7 @@ export const Footer = () => {
         >
           <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
             <p className="mb-3 text-sm text-slate-400 md:mb-0">
-              © {currentYear} Superteam All Rights Reserved
+              © {currentYear} A36 Labs All Rights Reserved
             </p>
             <p className="hidden text-sm text-slate-400 md:block">
               Thanks for reading this far, use coupon{' '}

@@ -25,9 +25,9 @@ export default function BountiesPage({ potentialSession }: BountiesPageProps) {
       meta={
         <>
           <Meta
-            title="Crypto Bounties | Web3 Bounties | Solana Bounties | Superteam Earn"
+            title="Crypto Bounties | Web3 Bounties | Solana Bounties | A36 Earn"
             description="Earn crypto by completing bounties. Find web3 bounties, Solana bounties, and crypto tasks in development, design, and content. Get paid in USDC for your skills."
-            canonical="https://superteam.fun/earn/bounties/"
+            canonical="https://a36labs.com/earn/bounties/"
             og={ASSET_URL + `/og/og.png`}
           />
           <JsonLd data={[breadcrumbSchema]} />

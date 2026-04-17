@@ -164,7 +164,7 @@ export const ApplicationList = ({
                       <Tooltip content={`${chapter.name} Member`}>
                         <img
                           src={chapter.icons}
-                          alt="Superteam Member"
+                          alt="A36 Labs Member"
                           className="size-3 rounded-full"
                         />
                       </Tooltip>

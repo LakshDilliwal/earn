@@ -16,8 +16,8 @@ export default function Branding() {
   return (
     <>
       <Meta
-        title="Brand Guidelines | Superteam"
-        description="Superteam brand guidelines: logo, colors, typography, and usage rules."
+        title="Brand Guidelines | A36 Labs"
+        description="A36 Labs brand guidelines: logo, colors, typography, and usage rules."
       />
 
       <div className="col-span-5">
@@ -56,7 +56,7 @@ export default function Branding() {
               {/* 2. Symbol */}
               <BrandingSectionHeader num="2" title="Symbol" id="symbol" />
               <p className="font-secondary mb-8 max-w-xl text-sm leading-relaxed text-white/70">
-                The symbol without the word &apos;Superteam&apos; is to be used
+                The symbol without the word &apos;A36 Labs&apos; is to be used
                 in spaces where the name already is mentioned adjacently, in
                 formats such as Twitter and Youtube.
               </p>
@@ -71,7 +71,7 @@ export default function Branding() {
                 id="colors"
               />
               <p className="font-secondary mb-8 max-w-xl text-sm leading-relaxed text-white/70">
-                The Superteam logo is primarily used in yellow against the
+                The A36 Labs logo is primarily used in yellow against the
                 purple background or vice versa. Otherwise it can be used in
                 black, yellow or purple in white backgrounds but only in white
                 on black backgrounds.
@@ -101,10 +101,10 @@ export default function Branding() {
                 id="palette"
               />
               <p className="font-secondary mb-8 max-w-xl text-sm leading-relaxed text-white/70">
-                The colour palette of Superteam is set to a theme of Super
+                The colour palette of A36 Labs is set to a theme of Super
                 Purple and Super Yellow. Purple connoting the Solana ecosystem
                 works as a background both conceptually and literally for
-                Superteam.
+                A36 Labs.
               </p>
               <div className="flex flex-wrap justify-center gap-10 rounded-xl border border-white/10 bg-[#121212] p-10">
                 {Object.values(BRAND_COLORS)
@@ -133,7 +133,7 @@ export default function Branding() {
                 id="typography"
               />
               <p className="font-secondary mb-8 max-w-xl text-sm leading-relaxed text-white/70">
-                The chosen typeface for Superteam is Archivo Semi Expanded, in
+                The chosen typeface for A36 Labs is Archivo Semi Expanded, in
                 various weights. The hierarchy is intuitive and is expanded upon
                 for the website.
               </p>

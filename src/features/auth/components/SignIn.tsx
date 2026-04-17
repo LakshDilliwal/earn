@@ -137,7 +137,7 @@ export const SignIn = ({
           </Link>{' '}
           and our{' '}
           <Link
-            href={`https://superteam.fun/earn/privacy-policy.pdf`}
+            href={`https://a36labs.com/earn/privacy-policy.pdf`}
             className="font-semibold hover:underline"
             target="_blank"
           >
@@ -152,22 +152,22 @@ export const SignIn = ({
           Need help? Reach out to us at{' '}
           {isMD ? (
             <CopyButton
-              text="support@superteam.fun"
+              text="support@a36labs.com"
               contentProps={{
                 className: 'px-1.5 py-0.5 text-[0.6875rem]',
               }}
             >
               <p className="underline hover:text-slate-500">
-                support@superteam.fun
+                support@a36labs.com
               </p>
             </CopyButton>
           ) : (
             <a
-              href="mailto:support@superteam.fun"
+              href="mailto:support@a36labs.com"
               className="underline hover:text-slate-500"
               target="_blank"
             >
-              support@superteam.fun
+              support@a36labs.com
             </a>
           )}
         </p>

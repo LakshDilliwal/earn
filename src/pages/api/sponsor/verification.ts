@@ -55,7 +55,7 @@ async function verification(req: NextApiRequestWithUser, res: NextApiResponse) {
       },
     });
 
-    // logger.info('Sending Telegram DM to Superteam Lead', {
+    // logger.info('Sending Telegram DM to A36 Labs Lead', {
     //   listingId: validationResult.data.listingId,
     //   superteamName: validationResult.data.superteamName,
     //   superteamLead: validationResult.data.superteamLead,
@@ -69,13 +69,13 @@ async function verification(req: NextApiRequestWithUser, res: NextApiResponse) {
     //     superteamName: validationResult.data.superteamName,
     //     superteamLead: validationResult.data.superteamLead,
     //   });
-    //   logger.info('Sent Telegram DM to Superteam Lead', {
+    //   logger.info('Sent Telegram DM to A36 Labs Lead', {
     //     listingId: validationResult.data.listingId,
     //     superteamName: validationResult.data.superteamName,
     //     superteamLead: validationResult.data.superteamLead,
     //   });
     // } catch (err) {
-    //   logger.error('Failed to send Telegram DM to Superteam Lead', err);
+    //   logger.error('Failed to send Telegram DM to A36 Labs Lead', err);
     // }
 
     logger.info('Sending Discord Verification message', {

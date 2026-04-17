@@ -20,7 +20,7 @@ export const SuperteamBadge = ({
     >
       <SuperteamIcon className={cn('size-3 text-zinc-500', iconClassName)} />
       <span className={cn('text-sm font-medium text-zinc-800', textClassName)}>
-        Superteam
+        A36 Labs
       </span>
     </div>
   );

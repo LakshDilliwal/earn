@@ -75,7 +75,7 @@ export const ListingSuccessModal = () => {
               onClick={onCopy}
             >
               <span className="truncate font-normal text-slate-500">
-                superteam.fun/earn/listing/{slug}
+                a36labs.com/earn/listing/{slug}
               </span>
               {hasCopied ? (
                 <Check className="h-5 w-5 text-slate-400" />

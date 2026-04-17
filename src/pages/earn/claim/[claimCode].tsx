@@ -112,7 +112,7 @@ export default function ClaimPage({
   return (
     <>
       <Head>
-        <title>Claim Agent | Superteam Earn</title>
+        <title>Claim Agent | A36 Earn</title>
       </Head>
       {isLoginOpen && (
         <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />

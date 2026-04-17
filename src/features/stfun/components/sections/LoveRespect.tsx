@@ -12,7 +12,7 @@ const testimonials = [
     name: 'Phantom',
     username: '@phantom',
     content:
-      'Few.\n\nShout-out to @SuperteamEarn and @SuperteamDAO for onboarding devs around the world into the ecosystem! 🤝 https://t.co/78iAaIeXld',
+      'Few.\n\nShout-out to @SuperteamEarn and @A36 Labs for onboarding devs around the world into the ecosystem! 🤝 https://t.co/78iAaIeXld',
     tweet_link: 'https://twitter.com/phantom/status/1612903184607088640',
   },
   {
@@ -21,7 +21,7 @@ const testimonials = [
     name: 'Austin Federa | 🛡️',
     username: '@Austin_Federa',
     content:
-      'Superteam Earn is quietly becoming a powerful force for growth in the ecosystem 🔥 https://t.co/vKmNhkMdYi',
+      'A36 Earn is quietly becoming a powerful force for growth in the ecosystem 🔥 https://t.co/vKmNhkMdYi',
     tweet_link: 'https://twitter.com/Austin_Federa/status/1613894970070401024',
   },
   {
@@ -30,7 +30,7 @@ const testimonials = [
     name: 'Kanav Kariya',
     username: '@KanavKariya',
     content:
-      "@mattysino @YouTube Sir, you are too kind. Everyone should check out @SuperteamDAO. They're doing some really dope stuff",
+      "@mattysino @YouTube Sir, you are too kind. Everyone should check out @A36 Labs. They're doing some really dope stuff",
     tweet_link: 'https://twitter.com/KanavKariya/status/1469529023583637505',
   },
   {
@@ -48,7 +48,7 @@ const testimonials = [
     name: 'Lily Liu',
     username: '@calilyliu',
     content:
-      'Amazing community, incredible energy, excellent event. Thanks @SuperteamDAO and @SolanaFndn !  Enjoyed days of bakchod banter with @akshaybd and @thetanmay https://t.co/CRVBqDiByz',
+      'Amazing community, incredible energy, excellent event. Thanks @A36 Labs and @SolanaFndn !  Enjoyed days of bakchod banter with @akshaybd and @thetanmay https://t.co/CRVBqDiByz',
     tweet_link: 'https://twitter.com/calilyliu/status/1572335926612824067',
   },
   {
@@ -57,7 +57,7 @@ const testimonials = [
     name: 'Solana Developers',
     username: '@solana_devs',
     content:
-      ".@SuperteamDAO has facilitated the growth of @solana communities around the globe starting in India over a year ago. They've created a product (https://t.co/epusyf8ABE) that allows anyone to earn their first salary in crypto. The GDP of Superteam has now reached $1 million! https://t.co/GNedWKSGfz",
+      ".@A36 Labs has facilitated the growth of @solana communities around the globe starting in India over a year ago. They've created a product (https://t.co/epusyf8ABE) that allows anyone to earn their first salary in crypto. The GDP of A36 Labs has now reached $1 million! https://t.co/GNedWKSGfz",
     tweet_link: 'https://twitter.com/solana_devs/status/1602649231344521217',
   },
   {
@@ -66,7 +66,7 @@ const testimonials = [
     name: 'Solana Breakpoint ☀️ AMSTERDAM Oct. 30-Nov.3',
     username: '@SolanaConf',
     content:
-      '"I\'m building this school to bring fellow Sierra Leoneans opportunity" - @c_ogoo \n\nThe average Sierra Leonean earns $40-60/month. A senior SWE earns ~$300/month.\n\nA single @SuperteamDAO bounty could 3-5x someone\'s monthly earnings.',
+      '"I\'m building this school to bring fellow Sierra Leoneans opportunity" - @c_ogoo \n\nThe average Sierra Leonean earns $40-60/month. A senior SWE earns ~$300/month.\n\nA single @A36 Labs bounty could 3-5x someone\'s monthly earnings.',
     tweet_link: 'https://twitter.com/SolanaConf/status/1589248034080100352',
   },
   {
@@ -75,7 +75,7 @@ const testimonials = [
     name: 'Solana Breakpoint ☀️ AMSTERDAM Oct. 30-Nov.3',
     username: '@SolanaConf',
     content:
-      "\"It's amazing how many people are pushing forward that we never even knew about, and a lot of it's international. @SuperteamDAO put @solana on the map in India. There's a one man army running 20 hackathons in Mexico.\n\nIt's a global movement.\" - @rajgokal https://t.co/iofq5okmMl",
+      "\"It's amazing how many people are pushing forward that we never even knew about, and a lot of it's international. @A36 Labs put @solana on the map in India. There's a one man army running 20 hackathons in Mexico.\n\nIt's a global movement.\" - @rajgokal https://t.co/iofq5okmMl",
     tweet_link: 'https://twitter.com/SolanaConf/status/1589688383311605760',
   },
   {
@@ -83,7 +83,7 @@ const testimonials = [
       'https://pbs.twimg.com/profile_images/1628457065747193859/94PkLn0S_normal.jpg',
     name: 'Mad Armani 🎒',
     username: '@armaniferrante',
-    content: '@akshaybd Superteam is leading the way 🫡',
+    content: '@akshaybd A36 Labs is leading the way 🫡',
     tweet_link: 'https://twitter.com/armaniferrante/status/1636224109716688896',
   },
   {
@@ -92,7 +92,7 @@ const testimonials = [
     name: 'Based Charker',
     username: '@therealchaseeb',
     content:
-      'While he wrote the playbook, the rest of the team pitches in and supports them to drive the numbers you see today. Fun fact, outside of the US, the top number of submissions came from countries that have been activated with a @SuperteamDAO!',
+      'While he wrote the playbook, the rest of the team pitches in and supports them to drive the numbers you see today. Fun fact, outside of the US, the top number of submissions came from countries that have been activated with a @A36 Labs!',
     tweet_link: 'https://twitter.com/therealchaseeb/status/1636735285106036736',
   },
   {
@@ -100,7 +100,7 @@ const testimonials = [
       'https://pbs.twimg.com/profile_images/1637276996530057216/qVezsmAV_normal.jpg',
     name: 'thelawrenceyan☉🌊💹',
     username: '@thelawrenceyan',
-    content: 'yo wtf\n\n@SuperteamDAO rn https://t.co/wFvi8BB32I',
+    content: 'yo wtf\n\n@A36 Labs rn https://t.co/wFvi8BB32I',
     tweet_link: 'https://twitter.com/thelawrenceyan/status/1623975469094940675',
   },
   {
@@ -109,7 +109,7 @@ const testimonials = [
     name: 'Aditya Mallik',
     username: '@mallikadityagfx',
     content:
-      'As a student I had worked as an intern, did some small local gigs for basically no money! \nBut through @SuperteamDAO it changed it all!\nNow I am working with some top @solana projects, earning real money while still being a student and sitting in my home!\n#gdpgdpgdp https://t.co/lt6uqnMfqf',
+      'As a student I had worked as an intern, did some small local gigs for basically no money! \nBut through @A36 Labs it changed it all!\nNow I am working with some top @solana projects, earning real money while still being a student and sitting in my home!\n#gdpgdpgdp https://t.co/lt6uqnMfqf',
     tweet_link:
       'https://twitter.com/mallikadityagfx/status/1602647767863918592',
   },
@@ -137,7 +137,7 @@ const testimonials = [
     name: 'shek',
     username: '@shek_dev',
     content:
-      "💯 this. If it weren't for @akshaybd and @SuperteamDAO I wouldn't have founded @wordcel_club as a company. https://t.co/7ryBI3Aykw",
+      "💯 this. If it weren't for @akshaybd and @A36 Labs I wouldn't have founded @wordcel_club as a company. https://t.co/7ryBI3Aykw",
     tweet_link: 'https://twitter.com/shek_dev/status/1588070390173155329',
   },
   {
@@ -146,7 +146,7 @@ const testimonials = [
     name: 'Yash Agarwal',
     username: '@yashhsm',
     content:
-      '🚨 Update: Going full-time in Web3🚀\n\nFrom deploying 1st ETH smart contract in 2018 to observing from the sidelines for 3 years. Getting into @SuperteamDAO in 2021, not just revived my Web3 journey, but pushed me to build my own Web3 project!\n\nThread on my Web3 journey🧵👇',
+      '🚨 Update: Going full-time in Web3🚀\n\nFrom deploying 1st ETH smart contract in 2018 to observing from the sidelines for 3 years. Getting into @A36 Labs in 2021, not just revived my Web3 journey, but pushed me to build my own Web3 project!\n\nThread on my Web3 journey🧵👇',
     tweet_link: 'https://twitter.com/yashhsm/status/1566789436892819456',
   },
   {
@@ -155,7 +155,7 @@ const testimonials = [
     name: 'Het Dagli🔥💃',
     username: '@daglihet',
     content:
-      'Started my @SuperteamDAO journey by winning a writing bounty exactly a year ago.\n\nMade amazing friends, learned so much, and finally took the leap of faith, left my Web2 job to work for guys I got introduced through @SuperteamDAO \n\nGrateful for this amazing community.#gdpgdpgdp',
+      'Started my @A36 Labs journey by winning a writing bounty exactly a year ago.\n\nMade amazing friends, learned so much, and finally took the leap of faith, left my Web2 job to work for guys I got introduced through @A36 Labs \n\nGrateful for this amazing community.#gdpgdpgdp',
     tweet_link: 'https://twitter.com/daglihet/status/1602632709477732352',
   },
   {
@@ -164,7 +164,7 @@ const testimonials = [
     name: 'Kunal Bagaria',
     username: '@kb24x7',
     content:
-      'From joining a Discord invite link shared by @thetanmay  to speaking at one of the largest crypto conferences. The journey has been absolutely incredible!\n\n@SuperteamDAO #gdpgdpgdp https://t.co/xsg3qKzDY1',
+      'From joining a Discord invite link shared by @thetanmay  to speaking at one of the largest crypto conferences. The journey has been absolutely incredible!\n\n@A36 Labs #gdpgdpgdp https://t.co/xsg3qKzDY1',
     tweet_link: 'https://twitter.com/kb24x7/status/1602626850068770816',
   },
   {
@@ -173,7 +173,7 @@ const testimonials = [
     name: 'Bolt / Aabis',
     username: '@0xBolt',
     content:
-      'I joined @SuperteamDAO about an year ago and that changed my life dramatically.\nFrom being a random high school kid to earning, building and winning. There were burnouts, there were work intensive times, however the journey was worth it! #GDPGDPGDP',
+      'I joined @A36 Labs about an year ago and that changed my life dramatically.\nFrom being a random high school kid to earning, building and winning. There were burnouts, there were work intensive times, however the journey was worth it! #GDPGDPGDP',
     tweet_link: 'https://twitter.com/0xBolt/status/1602686698206498816',
   },
   {
@@ -182,7 +182,7 @@ const testimonials = [
     name: 'Ujjwal Gupta',
     username: '@ujjwalgupta49',
     content:
-      "With @SuperteamDAO I've been able to ship better products, get access to the best minds and create value for other members.\n\nContinuing the journey I help builder at @SuperteamVN and onboard the best minds to @solana.",
+      "With @A36 Labs I've been able to ship better products, get access to the best minds and create value for other members.\n\nContinuing the journey I help builder at @SuperteamVN and onboard the best minds to @solana.",
     tweet_link: 'https://twitter.com/ujjwalgupta49/status/1602625570935898113',
   },
   {
@@ -191,7 +191,7 @@ const testimonials = [
     name: 'Rakshit⚡️',
     username: '@rakshitbaveja',
     content:
-      'Today exactly a year back, I wrote this thread which got me in @SuperteamDAO as a member ANDD a full time job @0xPolygon.\n\nI never looked back. I was working at TCS when I wrote it, today I get to work with some of the best people on CT. \n\nINTERNET REMAINS UNDEFEATED :) https://t.co/cQex84gYIf',
+      'Today exactly a year back, I wrote this thread which got me in @A36 Labs as a member ANDD a full time job @0xPolygon.\n\nI never looked back. I was working at TCS when I wrote it, today I get to work with some of the best people on CT. \n\nINTERNET REMAINS UNDEFEATED :) https://t.co/cQex84gYIf',
     tweet_link: 'https://twitter.com/rakshitbaveja/status/1609165260627513345',
   },
   {
@@ -200,7 +200,7 @@ const testimonials = [
     name: 'CM 👾| Monstré',
     username: '@cm_monstre',
     content:
-      'Expressing my gratitude towards the community and team at @SuperteamDAO. A reflection on my experience since joining their community a few weeks ago. https://t.co/yLksEmTCzq',
+      'Expressing my gratitude towards the community and team at @A36 Labs. A reflection on my experience since joining their community a few weeks ago. https://t.co/yLksEmTCzq',
     tweet_link: 'https://twitter.com/cm_monstre/status/1619267692002951168',
   },
   {
@@ -208,7 +208,7 @@ const testimonials = [
       'https://pbs.twimg.com/profile_images/1641904504688762880/NJm0WYLH_normal.png',
     name: 'DeanTheMachine',
     username: '@_Dean_Machine',
-    content: 'Superteam never misses! https://t.co/lMRta2zkXc',
+    content: 'A36 Labs never misses! https://t.co/lMRta2zkXc',
     tweet_link: 'https://twitter.com/_Dean_Machine/status/1622499350684266497',
   },
   {
@@ -260,7 +260,7 @@ const testimonials = [
   {
     imgurl:
       'https://pbs.twimg.com/profile_images/1621304487120982023/iWCdJOoP_normal.jpg',
-    name: 'Superteam Germany',
+    name: 'A36 Labs Germany',
     username: '@SuperteamDE',
     content:
       "That's a wrap! Berlin Build Station has come to an end.\n\nWith more than 800 attendees, 60 Grizzlython projects, and 2000 bottles of beer, it's a huge W for the German @Solana ecosystem🇩🇪\n\nLet's see what happened👇 https://t.co/wIsSxZTVxQ",
@@ -272,7 +272,7 @@ const testimonials = [
     name: 'Balaji',
     username: '@balajis',
     content:
-      "A new hackathon on DAOs and network states.\n$100k in prizes, open globally.\nHosted by Superteam, organized by Solana Foundation.\nI'll be judging the winners. https://t.co/DMstV6HbTp",
+      "A new hackathon on DAOs and network states.\n$100k in prizes, open globally.\nHosted by A36 Labs, organized by Solana Foundation.\nI'll be judging the winners. https://t.co/DMstV6HbTp",
     tweet_link: 'https://twitter.com/balajis/status/1621194597249740803',
   },
 ];

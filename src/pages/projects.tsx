@@ -27,9 +27,9 @@ export default function Projects({ projects }: ProjectsPageProps) {
   return (
     <>
       <Meta
-        title="Projects | Industry Leading Builds by Superteam"
-        description="Explore industry-leading projects that Superteam Members around the world have built and launched on Solana."
-        canonical="https://superteam.fun/projects/"
+        title="Projects | Industry Leading Builds by A36 Labs"
+        description="Explore industry-leading projects that A36 Labs Members around the world have built and launched on Solana."
+        canonical="https://a36labs.com/projects/"
         og={`${ASSET_URL}/st/og/og-projects.png`}
       />
 

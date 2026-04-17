@@ -60,9 +60,9 @@ export default function Cypherpunk({ hackathon }: { hackathon: Hackathon }) {
             content={`https://res.cloudinary.com/dgvnuwspr/image/upload/v1760541751/assets/hackathon/cypherpunk/og-image.png`}
           />
           <Meta
-            title="Cypherpunk | Superteam Earn"
+            title="Cypherpunk | A36 Earn"
             description={`Solana Cypherpunk Online Hackathon`}
-            canonical="https://superteam.fun/earn/hackathon/cypherpunk/"
+            canonical="https://a36labs.com/earn/hackathon/cypherpunk/"
             og="https://res.cloudinary.com/dgvnuwspr/image/upload/v1760541751/assets/hackathon/cypherpunk/og-image.png"
           />
         </>
@@ -316,12 +316,12 @@ const faqs: { question: string; answer: string }[] = [
     question:
       'How are Sidetracks different from the main Colosseum Cypherpunk tracks?',
     answer:
-      'Sidetracks are extra challenges hosted by Superteam Earn, separate from Colosseum’s Cypherpunk tracks. They offer additional opportunities to build unique projects and win special prizes.',
+      'Sidetracks are extra challenges hosted by A36 Earn, separate from Colosseum’s Cypherpunk tracks. They offer additional opportunities to build unique projects and win special prizes.',
   },
   {
-    question: 'Do I need to submit separately to Sidetracks on Superteam Earn?',
+    question: 'Do I need to submit separately to Sidetracks on A36 Earn?',
     answer:
-      'Yes! Sidetracks have their own submission process on Superteam Earn. Make sure you submit your project directly to each Sidetrack you wish to enter.',
+      'Yes! Sidetracks have their own submission process on A36 Earn. Make sure you submit your project directly to each Sidetrack you wish to enter.',
   },
   {
     question: 'When will Sidetrack winners be announced?',

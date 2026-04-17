@@ -152,7 +152,7 @@ interface PersonSchema extends BaseSchema {
 }
 
 /**
- * Generate Organization schema for Superteam Earn
+ * Generate Organization schema for A36 Earn
  */
 export function generateOrganizationSchema(): OrganizationSchema {
   const baseUrl = getURL();
@@ -220,7 +220,7 @@ export function generateSponsorOrganizationSchema(
 }
 
 /**
- * Generate Organization schema for a regional Superteam chapter
+ * Generate Organization schema for a regional A36 Labs chapter
  */
 export function generateRegionalOrganizationSchema(region: {
   readonly displayValue: string;
@@ -233,9 +233,9 @@ export function generateRegionalOrganizationSchema(region: {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: `Superteam Earn ${region.displayValue}`,
+    name: `A36 Earn ${region.displayValue}`,
     url: `${baseUrl}regions/${region.slug}/`,
-    description: `Superteam Earn ${region.displayValue} - Discover bounties and grants in the ${region.displayValue} crypto community`,
+    description: `A36 Earn ${region.displayValue} - Discover bounties and grants in the ${region.displayValue} crypto community`,
   };
 }
 
@@ -520,7 +520,7 @@ interface SuperteamInput {
 }
 
 /**
- * Generate Organization schema for all Superteam chapters using @graph pattern
+ * Generate Organization schema for all A36 Labs chapters using @graph pattern
  * Used for SEO on the main homepage to improve discoverability of regional communities
  */
 export function generateSuperteamChaptersSchema(

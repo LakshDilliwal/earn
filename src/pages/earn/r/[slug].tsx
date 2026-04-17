@@ -138,7 +138,7 @@ export default function ReferralLandingPage({
     if (isLoading) return 'Loading…';
     if (!data) return '';
     if (data.valid)
-      return `${data.inviter?.name ?? 'A Superteamer'} has invited you to Superteam Earn`;
+      return `${data.inviter?.name ?? 'A Superteamer'} has invited you to A36 Earn`;
     if (data.reason === 'INVALID')
       return 'This invite link is invalid or expired';
     if (data.reason === 'MISSING_CODE') return 'Missing referral code';
@@ -164,7 +164,7 @@ export default function ReferralLandingPage({
       <div className="flex w-full items-center justify-center border-b py-3">
         <LocalImage
           src="/assets/logo.svg"
-          alt="Superteam Earn"
+          alt="A36 Earn"
           className="h-[1.4rem] w-auto cursor-pointer object-contain"
           loading="eager"
         />

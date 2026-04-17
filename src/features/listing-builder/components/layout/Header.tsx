@@ -56,7 +56,7 @@ export function Header() {
           >
             <LocalImage
               src="/assets/logo.svg"
-              alt="Superteam Earn"
+              alt="A36 Earn"
               className="h-[1.4rem] w-auto cursor-pointer object-contain"
               loading="eager"
             />

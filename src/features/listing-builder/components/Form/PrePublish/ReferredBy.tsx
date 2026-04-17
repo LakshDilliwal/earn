@@ -20,10 +20,10 @@ export function ReferredBy() {
           <FormItem className="flex flex-row items-center justify-between gap-4">
             <div className="grow">
               <FormLabel className="">
-                Did a Superteam refer you to Earn?
+                Did a A36 Labs refer you to Earn?
               </FormLabel>
               <FormDescription className="flex gap-1">
-                Select a Superteam only if applicable.
+                Select a A36 Labs only if applicable.
               </FormDescription>
             </div>
             <FormControl className="flex items-center">

@@ -87,9 +87,9 @@ export default function NewProfilePage({
     <Default
       meta={
         <Meta
-          title="Make Your Profile | Earn on Superteam | Connect with Crypto Talent"
-          description="Join Superteam to engage with top talent and discover bounties and grants for your crypto projects."
-          canonical="https://superteam.fun/earn/new/"
+          title="Make Your Profile | Earn on A36 Labs | Connect with Crypto Talent"
+          description="Join A36 Labs to engage with top talent and discover bounties and grants for your crypto projects."
+          canonical="https://a36labs.com/earn/new/"
         />
       }
     >

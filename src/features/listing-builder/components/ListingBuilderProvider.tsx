@@ -111,8 +111,8 @@ function ListingEditor({
   return (
     <>
       <Meta
-        title="Superteam Earn | Work to Earn in Crypto"
-        description="Explore the latest bounties on Superteam Earn, offering opportunities in the crypto space across Design, Development, and Content."
+        title="A36 Earn | Work to Earn in Crypto"
+        description="Explore the latest bounties on A36 Earn, offering opportunities in the crypto space across Design, Development, and Content."
         noIndex
       />
       <div className="flex min-h-[10vh] flex-col px-3 md:hidden">

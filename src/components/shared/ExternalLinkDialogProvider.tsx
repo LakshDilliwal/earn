@@ -82,7 +82,7 @@ export function ExternalLinkDialogProvider({
               Open external link
             </AlertDialogTitle>
             <AlertDialogDescription className="text-muted-foreground text-sm sm:text-base">
-              You&apos;re leaving Superteam Earn to visit an external link:
+              You&apos;re leaving A36 Earn to visit an external link:
             </AlertDialogDescription>
           </AlertDialogHeader>
           <div className="bg-muted/50 text-foreground w-full rounded-md border px-3 py-2.5 text-sm break-all sm:text-base">

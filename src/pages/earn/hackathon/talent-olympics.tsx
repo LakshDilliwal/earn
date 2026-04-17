@@ -178,9 +178,9 @@ export default function TalentOlympics({ countryLeaders, rankings }: Props) {
       className="bg-white"
       meta={
         <Meta
-          title="Talent Olympics | Superteam Earn"
-          description="Explore the latest bounties on Superteam Earn, offering opportunities in the crypto space across Design, Development, and Content."
-          canonical="https://superteam.fun/earn/hackathon/talent-olympics/"
+          title="Talent Olympics | A36 Earn"
+          description="Explore the latest bounties on A36 Earn, offering opportunities in the crypto space across Design, Development, and Content."
+          canonical="https://a36labs.com/earn/hackathon/talent-olympics/"
         />
       }
     >
@@ -322,7 +322,7 @@ function Hero({
 
         <ExternalImage
           className="w-[5rem] sm:w-[7rem]"
-          alt="Superteam"
+          alt="A36 Labs"
           src={'/company-logos/superteam.svg'}
           style={{ height: PoweredByHeight }}
         />

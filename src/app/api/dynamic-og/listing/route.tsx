@@ -150,7 +150,7 @@ export async function GET(request: Request) {
                   objectFit: 'contain',
                 }}
                 alt="logo"
-                src={`https://superteam.fun/assets/${listingIcon}`}
+                src={`https://a36labs.com/assets/${listingIcon}`}
                 width="64px"
                 height="64px"
               />

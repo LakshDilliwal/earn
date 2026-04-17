@@ -172,7 +172,7 @@ export function WithdrawFundsFlow({
 
     if (!userWalletAddress || !earnWallet) {
       toast.error(
-        'Wallet mismatch. Please contact support@superteam.fun to resolve this issue.',
+        'Wallet mismatch. Please contact support@a36labs.com to resolve this issue.',
       );
       log.error(
         `Withdrawal wallet mismatch: userId: ${user?.id}, userWalletAddress: ${userWalletAddress ?? 'missing'}, availableWallets: ${wallets
@@ -281,7 +281,7 @@ export function WithdrawFundsFlow({
         e.response?.data?.error === 'Invalid token selected'
       ) {
         toast.error(
-          "We don't support this token yet. Contact support@superteam.fun for us to add it.",
+          "We don't support this token yet. Contact support@a36labs.com for us to add it.",
         );
         posthog.capture('withdraw_unsupported_token');
       } else {
@@ -309,7 +309,7 @@ export function WithdrawFundsFlow({
           case 'unknown':
           default:
             toast.error(
-              'Something went wrong. Please try again. If the issue persists, contact support@superteam.fun.',
+              'Something went wrong. Please try again. If the issue persists, contact support@a36labs.com.',
             );
             break;
         }

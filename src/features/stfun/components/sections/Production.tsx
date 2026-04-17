@@ -144,7 +144,7 @@ export default function Production() {
                   'End-to-end bounty management',
                 ],
                 btnText: 'Start Earning',
-                btnLink: 'https://superteam.fun/earn',
+                btnLink: 'https://a36labs.com/earn',
               })
             }
           />
@@ -152,7 +152,7 @@ export default function Production() {
             className="min-h-[300px] min-w-[240px] md:col-start-1 md:row-start-8 md:row-end-10 lg:col-start-3 lg:row-start-1 lg:row-end-3"
             text="Idea Bank"
             imageUrl={`${ASSET_URL}/st/cards/Build_new.png`}
-            onClick={() => window.open('https://build.superteam.fun', '_blank')}
+            onClick={() => window.open('https://build.a36labs.com', '_blank')}
           />
           <IllustrationCard
             className="min-h-[300px] min-w-[240px] md:col-start-1 md:row-start-5 md:row-end-7 lg:col-start-2 lg:row-start-2 lg:row-end-5"
@@ -170,7 +170,7 @@ export default function Production() {
                   'paid out every week',
                 ],
                 btnText: 'Apply now!',
-                btnLink: 'https://superteam.fun/earn/grants/',
+                btnLink: 'https://a36labs.com/earn/grants/',
               })
             }
           />

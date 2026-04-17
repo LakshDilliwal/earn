@@ -134,7 +134,7 @@ export function ScoutTable({ bountyId, scouts, setInvited }: Props) {
                         </p>
                         {scout.recommended && (
                           <Tooltip
-                            content={<p>Superteam Recommended</p>}
+                            content={<p>A36 Labs Recommended</p>}
                             contentProps={{ className: 'text-xs' }}
                           >
                             <LocalImage

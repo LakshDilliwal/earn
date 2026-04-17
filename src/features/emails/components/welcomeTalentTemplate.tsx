@@ -11,7 +11,7 @@ export const WelcomeTalentTemplate = () => {
         I just wanted to say hey and let you know that I&apos;m a real person.
       </p>
       <p style={styles.text}>
-        I&apos;m Pratik, the CEO of Superteam Earn. I might not know you
+        I&apos;m Pratik, the CEO of A36 Earn. I might not know you
         personally yet, but I&apos;m pumped that you&apos;re here.
       </p>
       <p style={styles.text}>
@@ -21,7 +21,7 @@ export const WelcomeTalentTemplate = () => {
       </p>
       <p style={styles.text}>
         <strong>One favor before I go: </strong> reply to this email and let me
-        know why you joined Superteam Earn!
+        know why you joined A36 Earn!
       </p>
       <p style={styles.text}>Would love to learn more about you.</p>
 

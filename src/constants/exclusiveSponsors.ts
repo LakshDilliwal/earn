@@ -17,7 +17,7 @@ export const exclusiveSponsorData: Record<
     id: 'c6541e1c-5940-40e1-b420-dfbeba768c4b',
     title: 'Pyth Network',
     description:
-      'Explore the latest Research and Developer bounties for the Pyth Network ecosystem on Superteam Earn. Get started now!',
+      'Explore the latest Research and Developer bounties for the Pyth Network ecosystem on A36 Earn. Get started now!',
   },
   fundl: {
     id: '9198e806-2bb2-46c0-9b60-944e368bddaf',
@@ -48,6 +48,6 @@ export const exclusiveSponsorData: Record<
     id: '001f2124-4299-4b96-ac7e-f235a07b9268',
     title: 'Tars',
     description:
-      'Explore the latest bounties for Tars on Superteam Earn. Get started now!',
+      'Explore the latest bounties for Tars on A36 Earn. Get started now!',
   },
 };

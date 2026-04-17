@@ -117,11 +117,11 @@ export const SponsorVerificationForm = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="mb-1 text-slate-500" isRequired>
-                        Is there a Superteam Lead that can vouch for you?
+                        Is there a A36 Labs Lead that can vouch for you?
                       </FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="Enter Superteam Lead name"
+                          placeholder="Enter A36 Labs Lead name"
                           {...field}
                           value={field.value || ''}
                         />
@@ -137,13 +137,13 @@ export const SponsorVerificationForm = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="mb-1 text-slate-500" isRequired>
-                        Which Superteam does this lead represent?
+                        Which A36 Labs does this lead represent?
                       </FormLabel>
                       <FormControl>
                         <SuperteamCombobox
                           value={field.value || null}
                           onChange={(value) => field.onChange(value || '')}
-                          placeholder="Select a Superteam"
+                          placeholder="Select a A36 Labs"
                           className="w-full"
                           classNames={{
                             popoverContent:

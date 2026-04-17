@@ -48,7 +48,7 @@ export async function handler(
     await resend.emails.send({
       from: pratikEmail,
       to: [normalizedEmail],
-      subject: 'Welcome to Superteam Earn!',
+      subject: 'Welcome to A36 Earn!',
       react: WelcomeTalentTemplate(),
       replyTo: replyToEmail,
     });

@@ -26,9 +26,9 @@ export default function ProjectsPage({ potentialSession }: ProjectsPageProps) {
       meta={
         <>
           <Meta
-            title="Crypto Projects & Web3 Jobs | Solana Projects | Superteam Earn"
+            title="Crypto Projects & Web3 Jobs | Solana Projects | A36 Earn"
             description="Find remote crypto projects, web3 jobs, and Solana opportunities. Browse freelance projects, contract work, and full-time positions in blockchain, DeFi, NFTs, and more. Earn crypto for your skills."
-            canonical="https://superteam.fun/earn/projects/"
+            canonical="https://a36labs.com/earn/projects/"
             og={ASSET_URL + `/og/og.png`}
           />
           <JsonLd data={[breadcrumbSchema]} />

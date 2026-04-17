@@ -33,8 +33,8 @@ const SkillPage = ({
 
   const description =
     skillType === 'parent'
-      ? `Explore ${skillName} opportunities on Superteam Earn. Find bounties and projects that match your ${skillName.toLowerCase()} skills and start earning in crypto.`
-      : `Discover ${skillName} opportunities on Superteam Earn. Find specialized bounties and projects that require ${skillName.toLowerCase()} expertise.`;
+      ? `Explore ${skillName} opportunities on A36 Earn. Find bounties and projects that match your ${skillName.toLowerCase()} skills and start earning in crypto.`
+      : `Discover ${skillName} opportunities on A36 Earn. Find specialized bounties and projects that require ${skillName.toLowerCase()} expertise.`;
 
   const breadcrumbSchema = generateBreadcrumbListSchema([
     { name: 'Home', url: '/' },
@@ -58,9 +58,9 @@ const SkillPage = ({
       meta={
         <>
           <Meta
-            title={`${skillName} Opportunities | Superteam Earn`}
+            title={`${skillName} Opportunities | A36 Earn`}
             description={description}
-            canonical={`https://superteam.fun/earn/skill/${slug}/`}
+            canonical={`https://a36labs.com/earn/skill/${slug}/`}
             og={ogImage.toString()}
           />
           <Head>
@@ -69,7 +69,7 @@ const SkillPage = ({
             <meta property="og:image:height" content="630" />
             <meta
               property="og:image:alt"
-              content={`${skillName} Opportunities on Superteam Earn`}
+              content={`${skillName} Opportunities on A36 Earn`}
             />
             <meta name="twitter:card" content="summary_large_image" />
           </Head>

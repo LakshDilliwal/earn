@@ -26,9 +26,9 @@ export default function JobsPage({ potentialSession }: JobsPageProps) {
       meta={
         <>
           <Meta
-            title="Crypto Jobs & Web3 Careers | Solana Jobs | Superteam Earn"
+            title="Crypto Jobs & Web3 Careers | Solana Jobs | A36 Earn"
             description="Find remote crypto jobs, web3 careers, and Solana opportunities. Browse bounties, freelance projects, and full-time positions in blockchain, DeFi, NFTs, and more. Earn crypto for your skills."
-            canonical="https://superteam.fun/earn/jobs/"
+            canonical="https://a36labs.com/earn/jobs/"
             og={ASSET_URL + `/og/og.png`}
           />
           <JsonLd data={[breadcrumbSchema]} />

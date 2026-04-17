@@ -129,9 +129,9 @@ const SponsorPage = ({ sponsor, stats }: Props) => {
       meta={
         <>
           <Meta
-            title={`${name} Opportunities | Superteam Earn`}
+            title={`${name} Opportunities | A36 Earn`}
             description={`Check out all of ${name}'s latest earning opportunities on a single page.`}
-            canonical={`https://superteam.fun/earn/s/${sSlug}/`}
+            canonical={`https://a36labs.com/earn/s/${sSlug}/`}
             og={ogImage.toString()}
           />
           <Head>
@@ -139,7 +139,7 @@ const SponsorPage = ({ sponsor, stats }: Props) => {
             <meta property="og:image:height" content="630" />
             <meta
               property="og:image:alt"
-              content={`${name} on Superteam Earn`}
+              content={`${name} on A36 Earn`}
             />
           </Head>
           <JsonLd data={[organizationSchema, breadcrumbSchema]} />

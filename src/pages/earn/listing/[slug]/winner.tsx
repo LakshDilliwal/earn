@@ -43,10 +43,10 @@ function WinnerBounty({
     <Head>
       <title>{`${
         initialBounty?.title || 'Apply'
-      } by ${initialBounty?.sponsor?.name} | Superteam Earn Listing`}</title>
+      } by ${initialBounty?.sponsor?.name} | A36 Earn Listing`}</title>
       <meta
         name="description"
-        content={`${getListingTypeLabel(initialBounty?.type ?? 'Bounty')} on Superteam Earn | ${
+        content={`${getListingTypeLabel(initialBounty?.type ?? 'Bounty')} on A36 Earn | ${
           initialBounty?.sponsor?.name
         } is seeking freelancers and builders ${
           initialBounty?.title
@@ -57,13 +57,13 @@ function WinnerBounty({
       <meta property="og:image" content={`${image.toString()}`} />
       <meta
         property="og:title"
-        content={`${initialBounty?.title || 'Bounty'} | Superteam Earn`}
+        content={`${initialBounty?.title || 'Bounty'} | A36 Earn`}
       />
       <meta
         name="twitter:title"
-        content={`${initialBounty?.title || 'Bounty'} | Superteam Earn`}
+        content={`${initialBounty?.title || 'Bounty'} | A36 Earn`}
       />
-      <meta name="twitter:site" content="https://superteam.fun/earn" />
+      <meta name="twitter:site" content="https://a36labs.com/earn" />
       <meta name="twitter:creator" content="@SuperteamEarn" />
       <meta name="twitter:image" content={`${image.toString()}`} />
       <meta name="twitter:card" content="summary_large_image" />
@@ -71,7 +71,7 @@ function WinnerBounty({
       <meta property="og:image:height" content="675" />
       <meta
         property="og:image:alt"
-        content={`Winners announced for ${initialBounty?.title || 'Listing'} by ${initialBounty?.sponsor?.name || 'Sponsor'} on Superteam Earn`}
+        content={`Winners announced for ${initialBounty?.title || 'Listing'} by ${initialBounty?.sponsor?.name || 'Sponsor'} on A36 Earn`}
       />
       <meta property="og:type" content="website" />
       <meta name="robots" content="noindex, nofollow" />

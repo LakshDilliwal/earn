@@ -79,7 +79,7 @@ export function Survey({ open, setOpen }: Props) {
                   <DialogHeader>
                     <DialogHeader className="font-medium">
                       How likely are you to recommend other companies to use
-                      Superteam Earn?
+                      A36 Earn?
                     </DialogHeader>
                   </DialogHeader>
                   <Rating

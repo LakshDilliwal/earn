@@ -330,7 +330,7 @@ export default function EditProfilePage({
     <Default
       meta={
         <Meta
-          title="Superteam Earn"
+          title="A36 Earn"
           description="Every Solana opportunity in one place!"
         />
       }

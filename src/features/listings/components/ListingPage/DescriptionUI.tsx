@@ -251,10 +251,10 @@ export function DescriptionUI({
                 textClassName="text-sm text-zinc-800 text-medium"
               />
               <p className="mt-4 text-xl font-medium text-zinc-800">
-                This grant is only available to Superteam Members
+                This grant is only available to A36 Labs Members
               </p>
               <p className="text-md mt-4 mb-4 font-medium text-slate-500">
-                To be eligible, you need to become a Superteam member of your
+                To be eligible, you need to become a A36 Labs member of your
                 region
               </p>
             </div>
@@ -297,7 +297,7 @@ export function DescriptionUI({
                 <SuperteamIcon className="text-brand-purple ml-0.5 size-9" />
                 <div className="flex flex-col">
                   <p className="text-md text-slate-500">
-                    Become a Superteam member of your region
+                    Become a A36 Labs member of your region
                   </p>
                 </div>
               </div>

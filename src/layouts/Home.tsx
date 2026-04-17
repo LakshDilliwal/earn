@@ -136,9 +136,9 @@ export function Home({
       meta={
         meta || (
           <Meta
-            title="Superteam Earn | Work to Earn in Crypto"
-            description="Explore the latest bounties on Superteam Earn, offering opportunities in the crypto space across Design, Development, and Content."
-            canonical="https://superteam.fun/earn"
+            title="A36 Earn | Bounties, Grants & Jobs"
+            description="A36 Earn — curated bounties, grants, and jobs from a global builder ecosystem across Web3, AI, and frontier tech. Not for everyone. For the right ones."
+            canonical="https://a36labs.com/earn"
           />
         )
       }

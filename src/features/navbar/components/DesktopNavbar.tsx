@@ -136,7 +136,7 @@ export const DesktopNavbar = ({
             >
               <LocalImage
                 className="h-[1.4rem] cursor-pointer object-contain"
-                alt="Superteam Earn"
+                alt="A36 Earn"
                 src="/assets/logo.svg"
               />
 

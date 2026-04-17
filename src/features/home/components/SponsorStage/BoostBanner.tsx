@@ -126,7 +126,7 @@ export function BoostBanner({ listing }: BoostBannerProps) {
             </h2>
             <p className="max-w-sm text-base text-slate-500">
               Increase the total rewards of your {listing.type} to unlock more
-              distribution from Superteam Earn
+              distribution from A36 Earn
             </p>
           </div>
         </div>

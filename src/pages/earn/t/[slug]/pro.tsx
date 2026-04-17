@@ -44,10 +44,10 @@ export default function ProSharePage({
 
   const title =
     talent?.firstName && talent?.lastName
-      ? `${talent.firstName} ${talent.lastName} | Superteam Earn Pro`
-      : 'Superteam Earn Pro';
+      ? `${talent.firstName} ${talent.lastName} | A36 Earn Pro`
+      : 'A36 Earn Pro';
 
-  const description = `Check out ${talent?.firstName || talent?.username || 'this'}'s Pro profile on Superteam Earn`;
+  const description = `Check out ${talent?.firstName || talent?.username || 'this'}'s Pro profile on A36 Earn`;
 
   return (
     <Head>

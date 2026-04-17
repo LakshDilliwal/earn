@@ -49,9 +49,9 @@ const CategoryPage = ({
       meta={
         <>
           <Meta
-            title={`${categoryName} Opportunities | Superteam Earn`}
+            title={`${categoryName} Opportunities | A36 Earn`}
             description={categoryDescription}
-            canonical={`https://superteam.fun/earn/category/${slug}/`}
+            canonical={`https://a36labs.com/earn/category/${slug}/`}
             og={ogImage.toString()}
           />
           <Head>
@@ -60,7 +60,7 @@ const CategoryPage = ({
             <meta property="og:image:height" content="630" />
             <meta
               property="og:image:alt"
-              content={`${categoryName} Opportunities on Superteam Earn`}
+              content={`${categoryName} Opportunities on A36 Earn`}
             />
             <meta name="twitter:card" content="summary_large_image" />
           </Head>

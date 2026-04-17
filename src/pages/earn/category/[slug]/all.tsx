@@ -27,7 +27,7 @@ export default function AllCategoryPage({
   const ogImage = new URL(`${getURL()}api/dynamic-og/category/`);
   ogImage.searchParams.set('category', categoryName);
 
-  const description = `Explore all ${categoryName.toLowerCase()} opportunities on Superteam Earn. ${categoryDescription}`;
+  const description = `Explore all ${categoryName.toLowerCase()} opportunities on A36 Earn. ${categoryDescription}`;
 
   const breadcrumbSchema = generateBreadcrumbListSchema([
     { name: 'Home', url: '/' },
@@ -50,9 +50,9 @@ export default function AllCategoryPage({
       meta={
         <>
           <Meta
-            title={`All ${categoryName} Opportunities | Superteam Earn`}
+            title={`All ${categoryName} Opportunities | A36 Earn`}
             description={description}
-            canonical={`https://superteam.fun/earn/category/${slug}/all/`}
+            canonical={`https://a36labs.com/earn/category/${slug}/all/`}
             og={ogImage.toString()}
           />
           <Head>
@@ -61,7 +61,7 @@ export default function AllCategoryPage({
             <meta property="og:image:height" content="630" />
             <meta
               property="og:image:alt"
-              content={`All ${categoryName} Opportunities on Superteam Earn`}
+              content={`All ${categoryName} Opportunities on A36 Earn`}
             />
             <meta name="twitter:card" content="summary_large_image" />
           </Head>

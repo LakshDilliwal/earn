@@ -91,7 +91,7 @@ interface SuperteamComboboxProps {
 export function SuperteamCombobox({
   value,
   onChange,
-  placeholder = 'Select Superteam',
+  placeholder = 'Select A36 Labs',
   unset,
   showGlobal,
   showNoAssociation,
@@ -187,7 +187,7 @@ export function SuperteamCombobox({
                     setOpen(false);
                   }}
                 >
-                  <p className="text-slate-400">Select Superteam</p>
+                  <p className="text-slate-400">Select A36 Labs</p>
                 </CommandItem>
               </CommandGroup>
             )}

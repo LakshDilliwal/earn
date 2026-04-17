@@ -32,8 +32,8 @@ export default function AllSkillPage({
 
   const description =
     skillType === 'parent'
-      ? `Explore all ${skillName} opportunities on Superteam Earn. Find bounties and projects that match your ${skillName.toLowerCase()} skills and start earning in crypto.`
-      : `Discover all ${skillName} opportunities on Superteam Earn. Find specialized bounties and projects that require ${skillName.toLowerCase()} expertise.`;
+      ? `Explore all ${skillName} opportunities on A36 Earn. Find bounties and projects that match your ${skillName.toLowerCase()} skills and start earning in crypto.`
+      : `Discover all ${skillName} opportunities on A36 Earn. Find specialized bounties and projects that require ${skillName.toLowerCase()} expertise.`;
 
   const breadcrumbSchema = generateBreadcrumbListSchema([
     { name: 'Home', url: '/' },
@@ -57,9 +57,9 @@ export default function AllSkillPage({
       meta={
         <>
           <Meta
-            title={`All ${skillName} Opportunities | Superteam Earn`}
+            title={`All ${skillName} Opportunities | A36 Earn`}
             description={description}
-            canonical={`https://superteam.fun/earn/skill/${slug}/all/`}
+            canonical={`https://a36labs.com/earn/skill/${slug}/all/`}
             og={ogImage.toString()}
           />
           <Head>
@@ -68,7 +68,7 @@ export default function AllSkillPage({
             <meta property="og:image:height" content="630" />
             <meta
               property="og:image:alt"
-              content={`All ${skillName} Opportunities on Superteam Earn`}
+              content={`All ${skillName} Opportunities on A36 Earn`}
             />
             <meta name="twitter:card" content="summary_large_image" />
           </Head>

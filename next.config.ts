@@ -3,7 +3,7 @@ import { type NextConfig } from 'next';
 // =============================================================================
 // A36 Earn — next.config.ts
 // Platform: earn.a36labs.com
-// Stripped: next-axiom, next-pwa, Privy, Superteam CSP origins
+// Stripped: next-axiom, next-pwa, Privy, A36 Labs CSP origins
 // =============================================================================
 
 const baseCsp = `

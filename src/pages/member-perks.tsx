@@ -26,9 +26,9 @@ export default function MemberPerks({
   return (
     <>
       <Meta
-        title="Member Perks | Exclusive Benefits for Superteam Members"
-        description="Being a Superteam member comes with many perks. Explore exclusive perks available to members around the world."
-        canonical="https://superteam.fun/member-perks/"
+        title="Member Perks | Exclusive Benefits for A36 Labs Members"
+        description="Being a A36 Labs member comes with many perks. Explore exclusive perks available to members around the world."
+        canonical="https://a36labs.com/member-perks/"
         og={`${ASSET_URL}/st/og/og-member-perks.png`}
       />
 

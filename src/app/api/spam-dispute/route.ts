@@ -127,14 +127,14 @@ export async function POST(request: NextRequest) {
         select: { grant: { select: { title: true, slug: true } } },
       });
       listingTitle = listing?.grant?.title;
-      listingUrl = `https://superteam.fun/earn/grants/${listing?.grant?.slug}`;
+      listingUrl = `https://a36labs.com/earn/grants/${listing?.grant?.slug}`;
     } else {
       const listing = await prisma.submission.findUnique({
         where: { id: submissionId },
         select: { listing: { select: { title: true, slug: true } } },
       });
       listingTitle = listing?.listing?.title;
-      listingUrl = `https://superteam.fun/earn/listing/${listing?.listing?.slug}`;
+      listingUrl = `https://a36labs.com/earn/listing/${listing?.listing?.slug}`;
     }
 
     const payload = {

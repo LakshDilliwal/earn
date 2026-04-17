@@ -297,9 +297,9 @@ const CreateSponsor = () => {
     <Default
       meta={
         <Meta
-          title="Create Sponsor | Superteam Earn"
+          title="Create Sponsor | A36 Earn"
           description="Every Solana opportunity in one place!"
-          canonical="https://superteam.fun/earn/new/sponsor/"
+          canonical="https://a36labs.com/earn/new/sponsor/"
         />
       }
     >
@@ -310,7 +310,7 @@ const CreateSponsor = () => {
               You&apos;re one step away
             </p>
             <p className="pb-4 text-center text-xl font-normal text-slate-600">
-              from joining Superteam Earn
+              from joining A36 Earn
             </p>
             <SignIn loginStep={loginStep} setLoginStep={setLoginStep} />
           </div>
@@ -319,7 +319,7 @@ const CreateSponsor = () => {
         <div className="flex w-full flex-col items-center px-4 pt-8 pb-24">
           <div className="flex flex-col gap-2 text-center">
             <h1 className="text-3xl font-semibold tracking-tight text-gray-900">
-              Welcome to Superteam Earn
+              Welcome to A36 Earn
             </h1>
             <p className="text-lg font-normal text-gray-600">
               Let&apos;s start with some basic information about your team
@@ -577,7 +577,7 @@ const CreateSponsor = () => {
                       className="text-xs text-slate-500"
                     >
                       I understand and acknowledge that this project is built
-                      on, or supports, the Solana blockchain, and that Superteam
+                      on, or supports, the Solana blockchain, and that A36 Labs
                       Earn is a platform exclusively for teams and projects
                       within the Solana ecosystem.
                       <span className="text-red-500">*</span>

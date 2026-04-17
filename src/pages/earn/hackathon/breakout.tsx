@@ -83,9 +83,9 @@ export default function Breakout({ hackathon }: { hackathon: Hackathon }) {
             content={`https://res.cloudinary.com/dgvnuwspr/image/upload/assets/hackathon/breakout/og-image.png`}
           />
           <Meta
-            title="Breakout | Superteam Earn"
+            title="Breakout | A36 Earn"
             description={`Solana Breakout Online Hackathon`}
-            canonical="https://superteam.fun/earn/hackathon/breakout/"
+            canonical="https://a36labs.com/earn/hackathon/breakout/"
             og="https://res.cloudinary.com/dgvnuwspr/image/upload/assets/hackathon/breakout/og-image.png"
           />
         </>
@@ -146,7 +146,7 @@ function Hero({
             className="w-full rounded-full bg-black px-5 text-base text-white hover:bg-slate-700"
             asChild
           >
-            <Link href="https://build.superteam.fun" target="_blank">
+            <Link href="https://build.a36labs.com" target="_blank">
               Find Ideas to Build
             </Link>
           </Button>
@@ -324,12 +324,12 @@ const faqs: { question: string; answer: string }[] = [
     question:
       'How are Sidetracks different from the main Colosseum Breakout tracks?',
     answer:
-      'Sidetracks are extra challenges hosted by Superteam Earn, separate from Colosseum’s Breakout tracks. They offer additional opportunities to build unique projects and win special prizes.',
+      'Sidetracks are extra challenges hosted by A36 Earn, separate from Colosseum’s Breakout tracks. They offer additional opportunities to build unique projects and win special prizes.',
   },
   {
-    question: 'Do I need to submit separately to Sidetracks on Superteam Earn?',
+    question: 'Do I need to submit separately to Sidetracks on A36 Earn?',
     answer:
-      'Yes! Sidetracks have their own submission process on Superteam Earn. Make sure you submit your project directly to each Sidetrack you wish to enter.',
+      'Yes! Sidetracks have their own submission process on A36 Earn. Make sure you submit your project directly to each Sidetrack you wish to enter.',
   },
   {
     question: 'When will Sidetrack winners be announced?',

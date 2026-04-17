@@ -60,7 +60,7 @@ export function TitleAndType() {
 
   const isEditing = useAtomValue(isEditingAtom);
   const placeholder = useMemo(() => {
-    if (type === 'project') return 'Frontend Development for Superteam';
+    if (type === 'project') return 'Frontend Development for A36 Labs';
     else return 'Write a Deep Dive on IBRL';
   }, [type]);
 

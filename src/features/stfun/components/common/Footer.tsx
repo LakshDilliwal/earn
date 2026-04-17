@@ -22,12 +22,12 @@ export default function Footer() {
         <div className="footer-texts mt-[64px] ml-[40px] flex flex-col pb-10 text-white md:flex-row lg:mt-0 lg:mr-[72px] lg:ml-0 lg:text-right">
           <div className="text-col-1 flex flex-col items-start gap-4 md:items-end">
             <a
-              href="https://superteam.fun/earn"
+              href="https://a36labs.com/earn"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-text"
             >
-              Superteam Earn
+              A36 Earn
             </a>
             <a
               href="https://airtable.com/appPZ5nE1OqZiBKx7/shrjTq2Nt07UhRXQ7/tbl9632RzL9BJv4G0"
@@ -46,7 +46,7 @@ export default function Footer() {
               Brand Guidelines
             </a>
             <a
-              href="mailto:support@superteam.fun"
+              href="mailto:support@a36labs.com"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-text"

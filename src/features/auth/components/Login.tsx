@@ -96,7 +96,7 @@ export const Login = ({
           </p>
           <p className="text-center text-sm text-slate-600">
             {isSponsor
-              ? 'from joining Superteam Earn'
+              ? 'from joining A36 Earn'
               : 'From earning in global standards'}
           </p>
         </div>

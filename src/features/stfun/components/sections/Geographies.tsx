@@ -23,11 +23,11 @@ export default function Geographies({ chapters }: GeographiesProps) {
         id="superteam-locations-heading"
         className="partners-text section-heading font-secondary mb-10 text-center text-[24px] leading-[22px] font-bold text-white md:mb-10 md:text-[32px] lg:leading-[26px]"
       >
-        Find Your Nearest Superteam
+        Find Your Nearest A36 Labs
       </h2>
 
       <p className="sr-only">
-        Discover Superteam chapters worldwide - Solana and Web3 talent
+        Discover A36 Labs chapters worldwide - Solana and Web3 talent
         communities. Find crypto bounties, blockchain jobs, and grants in your
         region.
       </p>
@@ -35,7 +35,7 @@ export default function Geographies({ chapters }: GeographiesProps) {
       <div className="col-span-5">
         <div className="mx-auto mt-10 max-w-[1200px] px-2">
           <ul
-            aria-label="Superteam regional chapters"
+            aria-label="A36 Labs regional chapters"
             className="flex flex-wrap justify-center gap-2.5 md:gap-3"
           >
             {chapters.map((superteam) => {
@@ -115,7 +115,7 @@ export default function Geographies({ chapters }: GeographiesProps) {
       <noscript>
         <div className="mx-auto max-w-[1200px] px-4 py-8">
           <h3 className="mb-4 text-lg font-semibold text-white">
-            Superteam Locations - Global Web3 &amp; Solana Communities
+            A36 Labs Locations - Global Web3 &amp; Solana Communities
           </h3>
           <ul className="list-disc space-y-1 pl-5">
             {chapters

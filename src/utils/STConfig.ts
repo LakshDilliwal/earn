@@ -1,8 +1,8 @@
 export const STConfig = {
-  site_name: 'Superteam',
-  title: 'Superteam',
+  site_name: 'A36 Labs',
+  title: 'A36 Labs',
   description:
-    'Superteam is a community of the best talent learning, earning and building in crypto.',
+    'A36 Labs is a community of the best talent learning, earning and building in crypto.',
   locale: 'en',
-  twitter_handle: '@Superteam',
+  twitter_handle: '@A36 Labs',
 };

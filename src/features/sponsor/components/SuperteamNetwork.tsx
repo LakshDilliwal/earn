@@ -18,7 +18,7 @@ export function SuperteamNetwork() {
       <div className="relative flex w-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm md:flex-row">
         <div className="flex w-full flex-col gap-6 p-6 sm:p-8 md:w-[55%] md:p-10">
           <h2 className="text-[2.45rem] leading-[1.1] font-semibold text-slate-800 sm:text-[2.75rem]">
-            Distribute to the Superteam Network
+            Distribute to the A36 Labs Network
           </h2>
 
           <div className="h-px w-full max-w-[30rem] bg-slate-200" />
@@ -56,7 +56,7 @@ export function SuperteamNetwork() {
         <div className="relative hidden min-h-[18rem] flex-1 md:block">
           <img
             src={GLOBE_URL}
-            alt="Superteam globe"
+            alt="A36 Labs globe"
             className="pointer-events-none absolute -top-4 -right-12 h-[160%] w-[160%] object-contain opacity-80"
           />
           <SuperteamIcon className="pointer-events-none absolute top-5/8 right-1/8 size-32 -translate-x-1/2 -translate-y-1/2 text-[#45556C] opacity-90" />
@@ -65,7 +65,7 @@ export function SuperteamNetwork() {
         <div className="relative flex h-[12rem] w-full items-center justify-center md:hidden">
           <img
             src={GLOBE_URL}
-            alt="Superteam globe"
+            alt="A36 Labs globe"
             className="pointer-events-none relative top-[10rem] -left-10 h-full w-full scale-250 object-contain"
           />
           <SuperteamIcon className="pointer-events-none absolute top-5/9 left-2/4 size-18 -translate-x-1/2 -translate-y-1/2 text-[#45556C] opacity-90" />

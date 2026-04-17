@@ -34,7 +34,7 @@ export default async function handler(
 ) {
   if (req.method === 'GET') {
     return res.status(200).json({
-      message: 'Superteam Earn Agent API',
+      message: 'A36 Earn Agent API',
       docs: '/skill.md',
       heartbeat: '/heartbeat.md',
       register: 'POST /api/agents',
@@ -60,7 +60,7 @@ export default async function handler(
     const { name } = schema.parse(req.body);
 
     const userId = crypto.randomUUID();
-    const email = `agent+${userId}@agents.superteam.fun`;
+    const email = `agent+${userId}@agents.a36labs.com`;
     const privyDid = `agent:${userId}`;
     const firstNameSeed = name.trim().split(/\s+/)[0];
 

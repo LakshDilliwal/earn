@@ -267,7 +267,7 @@ export function getOpportunityDisplayName(tags: ParsedOpportunityTags): string {
 
 /**
  * Generate SEO-friendly description based on tag combination
- * Uses consistent sentence structure with keywords: web3, crypto, Solana, Superteam Earn
+ * Uses consistent sentence structure with keywords: web3, crypto, Solana, A36 Earn
  */
 export function getOpportunityDescription(tags: ParsedOpportunityTags): string {
   const skillName = tags.skill ? findSkillBySlug(tags.skill)?.name : undefined;
@@ -290,70 +290,70 @@ export function getOpportunityDescription(tags: ParsedOpportunityTags): string {
 
   // Single tag cases
   if (hasSkill && !hasCategory && !hasRegion && !hasType) {
-    return `Find top ${skillName} opportunities in web3 — explore remote Solana bounties, grants, and projects on Superteam Earn`;
+    return `Find top ${skillName} opportunities in web3 — explore remote Solana bounties, grants, and projects on A36 Earn`;
   }
 
   if (!hasSkill && !hasCategory && hasRegion && !hasType) {
-    return `Explore ${regionName}'s best remote web3 bounties, projects and grants — earn crypto by working on real Solana projects through Superteam Earn`;
+    return `Explore ${regionName}'s best remote web3 bounties, projects and grants — earn crypto by working on real Solana projects through A36 Earn`;
   }
 
   if (!hasSkill && !hasCategory && !hasRegion && hasType) {
-    return `Find top remote web3 ${typeLabel.toLowerCase()} on Solana — earn crypto for your skills through Superteam Earn`;
+    return `Find top remote web3 ${typeLabel.toLowerCase()} on Solana — earn crypto for your skills through A36 Earn`;
   }
 
   if (!hasSkill && hasCategory && !hasRegion && !hasType) {
-    return `Find top ${categoryName} opportunities in web3 — explore remote Solana bounties, grants, and projects on Superteam Earn`;
+    return `Find top ${categoryName} opportunities in web3 — explore remote Solana bounties, grants, and projects on A36 Earn`;
   }
 
   // Two tag combinations
   if (hasSkill && hasRegion && !hasType && !hasCategory) {
-    return `Find top remote ${skillName} opportunities in ${regionName} — explore Solana bounties, grants, and projects on Superteam Earn`;
+    return `Find top remote ${skillName} opportunities in ${regionName} — explore Solana bounties, grants, and projects on A36 Earn`;
   }
 
   if (hasSkill && hasType && !hasRegion && !hasCategory) {
-    return `Find top remote ${skillName} ${typeLabel.toLowerCase()} in web3 — get paid in crypto for your Solana skills on Superteam Earn`;
+    return `Find top remote ${skillName} ${typeLabel.toLowerCase()} in web3 — get paid in crypto for your Solana skills on A36 Earn`;
   }
 
   if (hasSkill && hasCategory && !hasRegion && !hasType) {
-    return `Find top remote ${skillName} ${categoryName?.toLowerCase()} opportunities in web3 — explore Solana bounties, grants, and projects on Superteam Earn`;
+    return `Find top remote ${skillName} ${categoryName?.toLowerCase()} opportunities in web3 — explore Solana bounties, grants, and projects on A36 Earn`;
   }
 
   if (hasRegion && hasType && !hasSkill && !hasCategory) {
-    return `Find top remote web3 ${typeLabel.toLowerCase()} in ${regionName} — earn crypto by working on real Solana projects through Superteam Earn`;
+    return `Find top remote web3 ${typeLabel.toLowerCase()} in ${regionName} — earn crypto by working on real Solana projects through A36 Earn`;
   }
 
   if (hasRegion && hasCategory && !hasSkill && !hasType) {
-    return `Explore ${regionName}'s best remote web3 ${categoryName?.toLowerCase()} bounties, projects and grants — earn crypto by working on real Solana projects through Superteam Earn`;
+    return `Explore ${regionName}'s best remote web3 ${categoryName?.toLowerCase()} bounties, projects and grants — earn crypto by working on real Solana projects through A36 Earn`;
   }
 
   if (hasType && hasCategory && !hasSkill && !hasRegion) {
-    return `Find top remote web3 ${categoryName?.toLowerCase()} ${typeLabel.toLowerCase()} on Solana — earn crypto for your skills through Superteam Earn`;
+    return `Find top remote web3 ${categoryName?.toLowerCase()} ${typeLabel.toLowerCase()} on Solana — earn crypto for your skills through A36 Earn`;
   }
 
   // Three tag combinations
   if (hasSkill && hasRegion && hasType && !hasCategory) {
-    return `Find top remote ${skillName} crypto ${typeLabel.toLowerCase()} in ${regionName} — work remotely on real Solana projects through Superteam Earn`;
+    return `Find top remote ${skillName} crypto ${typeLabel.toLowerCase()} in ${regionName} — work remotely on real Solana projects through A36 Earn`;
   }
 
   if (hasSkill && hasRegion && hasCategory && !hasType) {
-    return `Find top remote ${skillName} ${categoryName?.toLowerCase()} opportunities in ${regionName} — explore Solana bounties, grants, and projects on Superteam Earn`;
+    return `Find top remote ${skillName} ${categoryName?.toLowerCase()} opportunities in ${regionName} — explore Solana bounties, grants, and projects on A36 Earn`;
   }
 
   if (hasSkill && hasType && hasCategory && !hasRegion) {
-    return `Find top remote ${skillName} ${categoryName?.toLowerCase()} ${typeLabel.toLowerCase()} in web3 — get paid in crypto for your Solana skills on Superteam Earn`;
+    return `Find top remote ${skillName} ${categoryName?.toLowerCase()} ${typeLabel.toLowerCase()} in web3 — get paid in crypto for your Solana skills on A36 Earn`;
   }
 
   if (hasRegion && hasType && hasCategory && !hasSkill) {
-    return `Find top remote web3 ${categoryName?.toLowerCase()} ${typeLabel.toLowerCase()} in ${regionName} — earn crypto by working on real Solana projects through Superteam Earn`;
+    return `Find top remote web3 ${categoryName?.toLowerCase()} ${typeLabel.toLowerCase()} in ${regionName} — earn crypto by working on real Solana projects through A36 Earn`;
   }
 
   // Four tag combination (all tags)
   if (hasSkill && hasRegion && hasType && hasCategory) {
-    return `Find top remote ${skillName} ${categoryName?.toLowerCase()} crypto ${typeLabel.toLowerCase()} in ${regionName} — work remotely on real Solana projects through Superteam Earn`;
+    return `Find top remote ${skillName} ${categoryName?.toLowerCase()} crypto ${typeLabel.toLowerCase()} in ${regionName} — work remotely on real Solana projects through A36 Earn`;
   }
 
   // Fallback (no tags or just global)
-  return `Find top remote web3 opportunities — explore Solana bounties, grants, and projects to earn crypto through Superteam Earn`;
+  return `Find top remote web3 opportunities — explore Solana bounties, grants, and projects to earn crypto through A36 Earn`;
 }
 
 export function getCategoryNameFromTags(

@@ -158,7 +158,7 @@ export async function POST(request: NextRequest) {
           peopleId: user.peopleId,
         });
         return NextResponse.json(
-          { error: 'This grant is only available to Superteam members' },
+          { error: 'This grant is only available to A36 Labs members' },
           { status: 403 },
         );
       }

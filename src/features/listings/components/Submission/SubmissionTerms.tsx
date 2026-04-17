@@ -53,42 +53,42 @@ export const SubmissionTerms = ({
               .
             </li>
             <li>
-              Superteam Earn acts solely as a platform for the Partner to list
+              A36 Earn acts solely as a platform for the Partner to list
               contests, bounties, projects or similar engagements{' '}
               {`("Activities")`} on its platform {`("ST Earn Platform")`}.
             </li>
             <li>
-              Superteam Earn shall not be liable for any Activities listed by
+              A36 Earn shall not be liable for any Activities listed by
               the Partner on the ST Earn Platform. The Partner is solely
               responsible for the content, rules, scope and execution of their
               Activities.
             </li>
             <li>
               Users participating in Activities listed by Partners do so at
-              their own risk and discretion. Superteam Earn disclaims all
+              their own risk and discretion. A36 Earn disclaims all
               liabilities related to user participation in such Activities.
             </li>
             <li>
               Any disputes or issues arising between users and partners
               regarding Activities shall be resolved directly between the
-              parties involved. Superteam Earn shall not be responsible for
+              parties involved. A36 Earn shall not be responsible for
               mediating or resolving such disputes.
             </li>
             <li>
               By using the platform and participating in any Activities, users
-              agree to release Superteam Earn from any claims, liabilities, or
+              agree to release A36 Earn from any claims, liabilities, or
               damages arising from their participation in Activities listed by
               Partners.
             </li>
             <li>
-              Superteam Earn does not guarantee the accuracy or legality of
+              A36 Earn does not guarantee the accuracy or legality of
               Activities listed by Partners. Users are advised to exercise
               caution and conduct their own due diligence before participating
               in any Activities.
             </li>
             <li>
               Partners listing Activities on the Platform agree to indemnify and
-              hold Superteam Earn harmless from any claims, damages, or
+              hold A36 Earn harmless from any claims, damages, or
               liabilities arising from their Activities.
             </li>
           </ul>

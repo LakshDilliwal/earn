@@ -94,11 +94,11 @@ export function GrantPageLayout({
       meta={
         <>
           <Meta
-            title={`${initialGrant?.title || 'Grant'} | Superteam Earn`}
-            description={`${initialGrant?.title || 'Grant'} by ${initialGrant?.sponsor?.name}${rewardText ? ` | Apply for funding ${rewardText}` : ''} in ${initialGrant?.token} on Superteam Earn`}
+            title={`${initialGrant?.title || 'Grant'} | A36 Earn`}
+            description={`${initialGrant?.title || 'Grant'} by ${initialGrant?.sponsor?.name}${rewardText ? ` | Apply for funding ${rewardText}` : ''} in ${initialGrant?.token} on A36 Earn`}
             canonical={
               initialGrant?.slug
-                ? `https://superteam.fun/earn/grants/${initialGrant.slug}/`
+                ? `https://a36labs.com/earn/grants/${initialGrant.slug}/`
                 : undefined
             }
             og={ogImageUrl}
@@ -108,7 +108,7 @@ export function GrantPageLayout({
             <meta property="og:image:height" content="630" />
             <meta
               property="og:image:alt"
-              content={`${initialGrant?.title || 'Grant'} - Grant by ${initialGrant?.sponsor?.name || 'Sponsor'} on Superteam Earn`}
+              content={`${initialGrant?.title || 'Grant'} - Grant by ${initialGrant?.sponsor?.name || 'Sponsor'} on A36 Earn`}
             />
           </Head>
         </>

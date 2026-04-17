@@ -37,9 +37,9 @@ export default function Talent() {
     <Default
       meta={
         <Meta
-          title="Create Your Profile to Access Bounties & Grants | Superteam Earn"
-          description="Become part of Superteam's talent network, where you can present your skills and collaborate on various crypto bounties, grants, and projects."
-          canonical="https://superteam.fun/earn/new/talent/"
+          title="Create Your Profile to Access Bounties & Grants | A36 Earn"
+          description="Become part of A36 Labs's talent network, where you can present your skills and collaborate on various crypto bounties, grants, and projects."
+          canonical="https://a36labs.com/earn/new/talent/"
         />
       }
     >
@@ -50,7 +50,7 @@ export default function Talent() {
               You&apos;re one step away
             </p>
             <p className="pb-4 text-center text-xl font-normal text-slate-600">
-              from joining Superteam Earn
+              from joining A36 Earn
             </p>
             <SignIn loginStep={loginStep} setLoginStep={setLoginStep} />
           </div>

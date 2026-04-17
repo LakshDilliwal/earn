@@ -31,7 +31,7 @@ export function CountryBanner({
         </div>
         <p className="mt-3 max-w-2xl text-left text-sm text-white md:text-lg">
           Get paid like the pros — work remotely for top web3 projects from your
-          home in {countryName} through Superteam Earn.
+          home in {countryName} through A36 Earn.
         </p>
       </div>
     </div>

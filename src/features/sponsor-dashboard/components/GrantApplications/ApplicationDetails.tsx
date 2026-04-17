@@ -130,7 +130,7 @@ export const ApplicationDetails = ({
                       <Tooltip content={`${chapter.name} Member`}>
                         <img
                           src={chapter.icons}
-                          alt="Superteam Member"
+                          alt="A36 Labs Member"
                           className="size-4 rounded-full"
                         />
                       </Tooltip>

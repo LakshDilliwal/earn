@@ -270,11 +270,11 @@ function TalentProfile({ talent, stats, bgIndex }: TalentProps) {
 
     const statsStr = `$${Math.round(
       stats?.totalWinnings || 0,
-    ).toLocaleString()} earned, ${stats?.wins || 0} wins on Superteam Earn.`;
+    ).toLocaleString()} earned, ${stats?.wins || 0} wins on A36 Earn.`;
 
     return parts.length > 0
       ? `${parts.join(' | ')}. ${statsStr}`
-      : `Talent profile on Superteam Earn. ${statsStr}`;
+      : `Talent profile on A36 Earn. ${statsStr}`;
   }, [talent, workPreferenceText, stats, isPublicProfile]);
 
   const ogImage = useMemo(() => {
@@ -309,8 +309,8 @@ function TalentProfile({ talent, stats, bgIndex }: TalentProps) {
 
   const title =
     talent?.firstName && talent?.lastName
-      ? `${talent?.firstName} ${talent?.lastName} | Superteam Earn Talent`
-      : 'Superteam Earn';
+      ? `${talent?.firstName} ${talent?.lastName} | A36 Earn Talent`
+      : 'A36 Earn';
 
   const feedItems = useMemo(
     () => feed?.pages.flatMap((page) => page) ?? [],
@@ -364,8 +364,8 @@ function TalentProfile({ talent, stats, bgIndex }: TalentProps) {
               property="og:image:alt"
               content={
                 isPublicProfile
-                  ? `${talent?.firstName} ${talent?.lastName} - Talent profile on Superteam Earn`
-                  : 'Talent on Superteam'
+                  ? `${talent?.firstName} ${talent?.lastName} - Talent profile on A36 Earn`
+                  : 'Talent on A36 Labs'
               }
             />
             <meta property="og:type" content="profile" />
@@ -388,7 +388,7 @@ function TalentProfile({ talent, stats, bgIndex }: TalentProps) {
                 <meta name="twitter:description" content={description} />
                 <link
                   rel="canonical"
-                  href={`https://superteam.fun/earn/t/${talent?.username}/`}
+                  href={`https://a36labs.com/earn/t/${talent?.username}/`}
                 />
               </>
             )}

@@ -22,7 +22,7 @@ const Meta = (props: IMetaProps) => {
   const isDashboardRoute = router.pathname.startsWith('/earn/dashboard');
   const shouldNoIndex = props.noIndex || isDashboardRoute;
   const config = isSTRoute ? STConfig : AppConfig;
-  const twitterSite = isSTRoute ? '@Superteam' : '@SuperteamEarn';
+  const twitterSite = isSTRoute ? '@A36 Labs' : '@SuperteamEarn';
   const defaultOg = isSTRoute
     ? `${ASSET_URL}/st/og/og.png`
     : `${ASSET_URL}/og/og.png`;

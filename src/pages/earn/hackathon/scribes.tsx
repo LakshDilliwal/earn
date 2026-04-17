@@ -21,9 +21,9 @@ export default function Scribes() {
       className="bg-white"
       meta={
         <Meta
-          title="Solana Scribes | Superteam Earn"
-          description="Explore the latest bounties on Superteam Earn, offering opportunities in the crypto space across Design, Development, and Content."
-          canonical="https://superteam.fun/earn/hackathon/scribes/"
+          title="Solana Scribes | A36 Earn"
+          description="Explore the latest bounties on A36 Earn, offering opportunities in the crypto space across Design, Development, and Content."
+          canonical="https://a36labs.com/earn/hackathon/scribes/"
         />
       }
     >

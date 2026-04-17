@@ -58,9 +58,9 @@ export default function Radar() {
       className="bg-white"
       meta={
         <Meta
-          title="Radar | Superteam Earn"
+          title="Radar | A36 Earn"
           description="Build a project for the latest Solana global hackathon!"
-          canonical="https://superteam.fun/earn/hackathon/radar/"
+          canonical="https://a36labs.com/earn/hackathon/radar/"
           og={ASSET_URL + `/og/hackathon/${slug}.png`}
         />
       }
@@ -86,7 +86,7 @@ export default function Radar() {
               className="my-6 rounded-full bg-[#E6B22D] px-6 py-4 text-sm text-black hover:bg-yellow-600 hover:text-white"
               onClick={() =>
                 window.open(
-                  'https://build.superteam.fun/ideas?utm_source=superteamearn&utm_campaign=radar',
+                  'https://build.a36labs.com/ideas?utm_source=superteamearn&utm_campaign=radar',
                   '_blank',
                 )
               }

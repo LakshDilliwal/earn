@@ -4,7 +4,7 @@ export function generateListingQuestionsPrompt(
   description: string,
   type: BountyType,
 ): string {
-  let prompt = `Analyze the following listing description for a '${type}' on platform Superteam Earn. Your goal is to generate relevant custom questions for the application/submission form, following the specific rules for the listing type.
+  let prompt = `Analyze the following listing description for a '${type}' on platform A36 Earn. Your goal is to generate relevant custom questions for the application/submission form, following the specific rules for the listing type.
 
 <listing-description>
 ${description}

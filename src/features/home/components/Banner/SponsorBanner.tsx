@@ -70,7 +70,7 @@ export function HomeSponsorBanner({ totalUsers }: HomeSponsorBannerProps) {
           />
           <img
             src="/assets/banner/banner-sponsor-logos-mobile.webp"
-            alt="Illustration — Gradient Light blue with Logos of Solana first Companies"
+            alt="Illustration — Gradient Light blue with Logos first Companies"
             className="h-full !w-auto"
             style={{
               width: '100%',

@@ -25,9 +25,9 @@ export default function BookmarksPage() {
       className="bg-white"
       meta={
         <Meta
-          title="Bookmarks | Superteam Earn"
-          description="Your bookmarks on Superteam Earn"
-          canonical="https://superteam.fun/earn/bookmarks/"
+          title="Bookmarks | A36 Earn"
+          description="Your bookmarks on A36 Earn"
+          canonical="https://a36labs.com/earn/bookmarks/"
         />
       }
     >

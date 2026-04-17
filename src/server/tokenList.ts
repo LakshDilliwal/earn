@@ -42,9 +42,9 @@ const DIRECT_ALLOWED_HOST_SUFFIXES = [
 ];
 
 const SAME_APP_HOSTS = new Set([
-  'superteam.fun',
-  'www.superteam.fun',
-  'earn.superteam.fun',
+  'a36labs.com',
+  'www.a36labs.com',
+  'earn.a36labs.com',
 ]);
 
 const IPFS_SUBDOMAIN_SUFFIXES = [

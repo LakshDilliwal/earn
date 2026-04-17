@@ -75,7 +75,7 @@ export default function SignupPage() {
         <div className="mt-10 w-full rounded-lg border border-gray-200 bg-white px-20 pt-20 pb-40 shadow-lg">
           <div className="flex flex-col items-center">
             <p className="text-center text-2xl font-semibold text-slate-600">
-              Welcome to Superteam Earn
+              Welcome to A36 Earn
             </p>
             <p className="text-center text-lg text-slate-400">
               Start your journey to access top global talent!
@@ -92,7 +92,7 @@ export default function SignupPage() {
       <div className="mt-10 w-full rounded-lg border border-gray-200 bg-white px-20 pt-20 pb-40 shadow-lg">
         <div className="flex flex-col items-center">
           <p className="text-center text-2xl font-semibold text-slate-600">
-            Welcome to Superteam Earn
+            Welcome to A36 Earn
           </p>
           <p className="mb-6 text-center text-lg text-slate-400">
             Start your journey to access top global talent!

@@ -118,12 +118,12 @@ function MainContent({ listing, grant, source }: SourceType) {
   ) => {
     let copy = '';
     if (source === 'grant') {
-      copy = `Just came across this massive grant opportunity by ${grant?.sponsor?.name} on Superteam Earn`;
+      copy = `Just came across this massive grant opportunity by ${grant?.sponsor?.name} on A36 Earn`;
     } else {
       if (listing?.type !== 'project') {
-        copy = `Just came across this banger${!!listing?.usdValue ? ` $${listing?.usdValue}` : ''} bounty by ${listing?.sponsor?.name} on Superteam Earn`;
+        copy = `Just came across this banger${!!listing?.usdValue ? ` $${listing?.usdValue}` : ''} bounty by ${listing?.sponsor?.name} on A36 Earn`;
       } else {
-        copy = `Just came across this gig by ${listing?.sponsor?.name} on Superteam Earn`;
+        copy = `Just came across this gig by ${listing?.sponsor?.name} on A36 Earn`;
       }
     }
     if (
@@ -191,7 +191,7 @@ function MainContent({ listing, grant, source }: SourceType) {
         onClick={onListingLinkCopy}
       >
         <span className="truncate font-normal text-slate-500">
-          superteam.fun/earn/{source === 'grant' ? 'grants' : 'listing'}/
+          a36labs.com/earn/{source === 'grant' ? 'grants' : 'listing'}/
           {source === 'grant' ? grant?.slug : listing?.slug}
         </span>
         {hasCopied ? (
