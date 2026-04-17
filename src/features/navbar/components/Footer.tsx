@@ -7,7 +7,6 @@ import MdOutlineMail from '@/components/icons/MdOutlineMail';
 import { RegionCombobox } from '@/components/shared/RegionCombobox';
 import { SkillsCombobox } from '@/components/shared/SkillsCombobox';
 import { SupportFormDialog } from '@/components/shared/SupportFormDialog';
-import { LocalImage } from '@/components/ui/local-image';
 import { skillSubSkillMap } from '@/interface/skills';
 import { cn } from '@/utils/cn';
 
@@ -55,7 +54,6 @@ const FooterColumn = ({
 );
 
 export const Footer = () => {
-  const currentYear = new Date().getFullYear();
   const router = useRouter();
   const { data: chapters = [] } = useQuery(chaptersQuery);
 
@@ -158,52 +156,58 @@ export const Footer = () => {
     { text: 'Grants', href: '/earn/grants' },
   ];
 
-  const categories = [
-    { text: 'Content', href: '/earn/category/content' },
-    { text: 'Design', href: '/earn/category/design' },
-    { text: 'Development', href: '/earn/category/development' },
-    { text: 'Others', href: '/earn/category/other' },
+  const content = [
+    { text: 'Podcast', href: '/projects' },
+    { text: 'Newsletter', href: '/member-perks' },
+    { text: 'Books', href: '/branding' },
+    { text: 'Media Kit', href: '/branding' },
   ];
 
-  const about = [
-    {
-      text: 'FAQ',
-      href: 'https://superteamdao.notion.site/A36 Labs-Earn-FAQ-aedaa039b25741b1861167d68aa880b1?pvs=4',
-    },
-    { text: 'Terms', href: '/earn/terms-of-use.pdf' },
+  const legal = [
     { text: 'Privacy Policy', href: '/earn/privacy-policy.pdf' },
-    {
-      text: 'Changelog',
-      href: 'https://superteamdao.notion.site/A36 Labs-Earn-Changelog-faf0c85972a742699ecc07a52b569827',
-    },
-    { text: 'Contact Us', supportForm: true },
+    { text: 'Terms', href: '/earn/terms-of-use.pdf' },
+    { text: 'FAQ', href: '/earn/dashboard/faq' },
+    { text: 'Contact', supportForm: true },
   ];
 
   return (
-    <footer className="border-t border-slate-200 bg-white">
+    <footer className="border-t border-white/10 bg-[#18261F] text-white/70">
       <div className="mx-auto max-w-7xl px-4 py-8">
         <div className="flex flex-col items-start justify-between md:flex-row">
           <div className="mb-8 flex max-w-[540px] flex-col md:mb-0">
             <div className="mb-4 flex items-center">
-              <LocalImage
-                className="mr-4 h-6"
-                alt="A36 Earn"
-                src="/assets/logo.svg"
-              />
+              <svg
+                viewBox="0 0 92 28"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="A36 Earn"
+                role="img"
+                fill="white"
+                className="h-7 w-auto"
+              >
+                <text
+                  x="0"
+                  y="22"
+                  fontFamily="Montserrat,sans-serif"
+                  fontSize="22"
+                  fontWeight="800"
+                  letterSpacing="-0.5"
+                >
+                  A36
+                </text>
+                <circle cx="86" cy="19" r="4" fill="#F9B012" />
+              </svg>
             </div>
-            <p className="mb-6 text-sm text-slate-500">
-              Discover high paying crypto bounties, projects and grants from the
-              best Solana companies in one place and apply to them using a
-              single profile.
+            <p className="mb-6 text-sm text-white/70">
+              Not for everyone. For the right ones.
             </p>
             <div className="flex items-center gap-4">
               <GitHub
                 link="https://github.com/A36 Labs/earn"
-                className="text-slate-500"
+                className="text-white/70"
               />
               <Twitter
-                link="https://twitter.com/superteamearn"
-                className="text-slate-500"
+                link="https://twitter.com/a36labs"
+                className="text-white/70"
               />
               <MdOutlineMail
                 className="'transition-opacity size-5 cursor-pointer text-slate-500 opacity-100 grayscale duration-200 hover:opacity-80"
@@ -213,30 +217,24 @@ export const Footer = () => {
               />
             </div>
 
-            <div>
-              <img
-                alt="Powered by Solana"
-                src="/assets/solana-powered.svg"
-                className="mt-6 w-36"
-              />
-            </div>
           </div>
           <div className="flex w-full flex-wrap justify-start gap-6 md:w-auto md:justify-end md:gap-16">
             <FooterColumn title="Opportunities" links={opportunities} />
-            <FooterColumn title="Categories" links={categories} />
-            <FooterColumn title="About" links={about} />
+            <FooterColumn title="Content" links={content} />
+            <FooterColumn title="Legal" links={legal} />
           </div>
         </div>
       </div>
-      <div className="bg-gray-100 py-4 pb-20 md:pb-4">
+      <div className="border-t border-white/10 bg-[#18261F] py-4 pb-20 md:pb-4">
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
-            <p className="mb-4 text-sm text-slate-500 md:mb-0">
-              © {currentYear} A36 Labs. All rights reserved.
+            <p className="mb-4 text-sm text-white/70 md:mb-0">
+              © 2026 A36 Labs. All rights reserved.
             </p>
             <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-6">
+              <p className="text-sm text-white/70">earn.a36labs.com</p>
               <div className="flex items-center">
-                <p className="mr-2 text-sm font-medium text-slate-500">SKILL</p>
+                <p className="mr-2 text-sm font-medium text-white/70">SKILL</p>
                 <SkillsCombobox
                   placeholder="Skill"
                   value={selectedSkill}
