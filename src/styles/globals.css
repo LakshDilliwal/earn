@@ -18,6 +18,7 @@
 @theme inline {
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
+  --font-montserrat: 'Montserrat', sans-serif;
 
   /* ST fonts - mapped from Next.js font variables */
   --font-primary: var(--font-satoshi);
@@ -94,6 +95,18 @@
   --color-brand-progress-dark-green: #0d9488;
   --color-brand-progress-light-green: #84cc16;
   --color-brand-progress-light-yellow: #fdba74;
+
+  --color-a36-bg: var(--a36-bg);
+  --color-a36-surface: var(--a36-surface);
+  --color-a36-dark: var(--a36-dark);
+  --color-a36-green: var(--a36-green);
+  --color-a36-text: var(--a36-text);
+  --color-a36-muted: var(--a36-text-muted);
+  --color-a36-border: var(--a36-border);
+  --color-a36-gold: var(--a36-gold);
+  --color-a36-gold-bright: var(--a36-gold-bright);
+  --color-a36-charcoal: var(--a36-charcoal);
+  --color-a36-white: var(--a36-white);
 
   --animate-caret-blink: caret-blink 1.2s ease-out infinite;
   --animate-accordion-down: accordion-down 0.2s ease-out;
@@ -261,6 +274,18 @@
   --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
   --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
   --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+  --a36-bg: #f6f1e8;
+  --a36-surface: #fbf7f0;
+  --a36-dark: #18261f;
+  --a36-green: #22362b;
+  --a36-text: #111111;
+  --a36-text-muted: #5e5a54;
+  --a36-border: #d9d1c5;
+  --a36-gold: #b8955d;
+  --a36-gold-bright: #f9b012;
+  --a36-charcoal: #1f2337;
+  --a36-white: #ffffff;
 }
 
 @layer base {
@@ -268,7 +293,9 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-a36-bg text-a36-text;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -279,7 +306,23 @@
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--a36-bg);
+  color: var(--a36-text);
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h3,
+h4,
+h5 {
+  font-weight: 600;
 }
 
 /* Wallet buttons in header (Select Wallet) */
