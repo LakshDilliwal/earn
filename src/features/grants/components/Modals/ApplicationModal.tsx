@@ -362,8 +362,8 @@ export const ApplicationModal = ({
 
       toast.success(
         grantApplication
-          ? 'Application updated successfully!'
-          : 'Application submitted successfully!',
+          ? 'Application sent.'
+          : 'Application sent.',
       );
 
       onClose();
@@ -389,7 +389,7 @@ export const ApplicationModal = ({
 
       toast.error(
         serverMessage ||
-          'Failed to submit application. Please try again or contact support.',
+          "Something broke. We're on it.",
       );
     }
   };

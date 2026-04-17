@@ -203,9 +203,11 @@ export const SubmissionPanel = ({
       ) : (
         <div className="p-3">
           <p className="text-xl font-medium text-slate-500">
-            No submissions found
+            No submissions yet.
           </p>
-          <p className="text-sm text-slate-400">Try a different search query</p>
+          <p className="text-sm text-slate-400">
+            Be the first to submit. Serious work gets noticed.
+          </p>
         </div>
       )}
     </div>

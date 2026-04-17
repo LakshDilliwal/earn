@@ -62,10 +62,8 @@ export const useForcedProfileRedirect = ({
       };
 
       if (wait > 0) {
-        toast.info('Finish your profile to continue browsing.', {
-          description: `You will be redirected in ~${Math.floor(
-            wait / 1000,
-          ).toFixed(0)} seconds.`,
+        toast.info('Build your profile.', {
+          description: 'Show the network who you are and what you build.',
           duration: wait,
         });
       }

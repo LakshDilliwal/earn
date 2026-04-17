@@ -179,9 +179,9 @@ export const TalentForm = () => {
         }
       },
       {
-        loading: 'Creating your profile...',
-        success: 'Your profile has been created successfully!',
-        error: 'Failed to create your profile.',
+        loading: 'Saving profile.',
+        success: 'Profile updated.',
+        error: "Something broke. We're on it.",
       },
     );
   };

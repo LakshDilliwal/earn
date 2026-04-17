@@ -11,11 +11,11 @@ export function ErrorInfo({
     <div className="flex flex-col items-center justify-center">
       <AiOutlineWarning size={52} className="text-slate-500" />
       <span className="font-bold text-slate-500">
-        {title || 'Something went wrong!'}
+        {title || "Something broke. We're on it."}
       </span>
       <span className="text-sm text-slate-500">
         {message ||
-          'There seems to be an error. Contact support@a36labs.com to get help'}
+          "Couldn't load this right now. Refresh and try again."}
       </span>
     </div>
   );

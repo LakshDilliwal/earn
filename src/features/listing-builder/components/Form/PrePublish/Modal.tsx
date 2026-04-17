@@ -257,7 +257,7 @@ export function PrePublish() {
                   if (isEditing) {
                     posthog.capture('update listing_sponsor');
                     router.push('/earn/dashboard/listings');
-                    toast.success('Listing Updated Successfully', {
+                    toast.success('Listing is live.', {
                       description: 'Redirecting to dashboard',
                     });
                   } else {
@@ -283,7 +283,7 @@ export function PrePublish() {
                 } catch (error) {
                   console.log(error);
                   toast.error(
-                    'Failed to create listing, please try again later',
+                    "Something broke. We're on it.",
                     {},
                   );
                 }

@@ -452,8 +452,8 @@ export const SubmissionDrawer = ({
 
       toast.success(
         editMode
-          ? 'Submission updated successfully'
-          : 'Submission created successfully',
+          ? 'Submission received. Good luck.'
+          : 'Submission received. Good luck.',
       );
       handleClose();
 
@@ -463,7 +463,7 @@ export const SubmissionDrawer = ({
       if (axios.isAxiosError(error)) {
         if (error.status === 401) {
           toast.error(
-            'Error occurred during submission. Please re-log in and try again.',
+            'Session expired. Log back in to continue.',
           );
         } else if (
           String(error?.response?.data.error)
@@ -471,13 +471,13 @@ export const SubmissionDrawer = ({
             .includes('submissions closed')
         ) {
           toast.error(
-            `Unfortunately, you ${isProject ? 'application' : 'submission'} couldn't be added because the deadline of the listing has passed.`,
+            "Couldn't load this right now. Refresh and try again.",
           );
         } else {
-          toast.error('Failed to submit. Please try again or contact support.');
+          toast.error("Something broke. We're on it.");
         }
       } else {
-        toast.error('Failed to submit. Please try again or contact support.');
+        toast.error("Something broke. We're on it.");
       }
     }
   };

@@ -234,7 +234,12 @@ export const ListingsSection = ({
     }
 
     if (error) {
-      return <EmptySection title="Error loading listings" />;
+      return (
+        <EmptySection
+          title="Something broke. We're on it."
+          message="Couldn't load this right now. Refresh and try again."
+        />
+      );
     }
 
     if (!listings?.length) {
@@ -263,8 +268,8 @@ export const ListingsSection = ({
           )}
           {emptySectionContent ?? (
             <EmptySection
-              title="No opportunities found"
-              message="We don't have any relevant opportunities for the current filters."
+              title="Nothing here yet."
+              message="New bounties and grants drop regularly. Check back or browse all categories."
             />
           )}
         </>
